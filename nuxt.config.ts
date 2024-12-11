@@ -1,23 +1,17 @@
-import Lara from "@primevue/themes/lara";
+import Lara from '@primevue/themes/lara';
 
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ["@primevue/nuxt-module"],
+  modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss'],
+  css: ['~/assets/css/tailwind.css'],
   primevue: {
-    components: {
-      prefix: "PV",
-    },
-    directives: {
-      prefix: "PV",
-    },
-
-    importPT: { as: "customPT", from: "@/prime-vue/passthrough.js" },
-    importTheme: { as: "customTheme", from: "@/prime-vue/theme.js" },
+    importPT: { as: 'customPT', from: '@/prime-vue/passthrough.js' },
+    importTheme: { as: 'customTheme', from: '@/prime-vue/theme.js' },
 
     options: {
       ripple: true,
-      inputVariant: "filled",
+      inputVariant: 'filled',
       theme: {
         preset: Lara,
         options: {

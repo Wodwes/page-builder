@@ -17,6 +17,12 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@primevue/nuxt-module": "^4.2.4"
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@primevue/nuxt-module": "^4.2.4",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "sass": "^1.77.8"
   }
 }
