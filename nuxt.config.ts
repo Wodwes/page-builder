@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss'],
   css: ['~/assets/css/tailwind.css'],
+
   primevue: {
     importPT: { as: 'customPT', from: '@/prime-vue/passthrough.js' },
     importTheme: { as: 'customTheme', from: '@/prime-vue/theme.js' },
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
       theme: {
         preset: Lara,
         options: {
-          darkModeSelector: false,
+          darkModeSelector: '.dark-mode',
           cssLayer: true,
         },
       },
