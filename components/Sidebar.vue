@@ -9,31 +9,14 @@
 const links = [
   [
     {
-      label: "Send Call",
-      icon: "i-heroicons-phone-arrow-up-right",
-      //   to: "/",
+      label: " Pages",
+      icon: "material-symbols:list-alt-outline-sharp",
+      // to: "/pages",
     },
-    {
-      label: "Send Batch",
-      icon: "i-heroicons-arrow-top-right-on-square-solid",
-      //   to: "/send-batch",
-    },
-    {
-      label: "Logs",
-      icon: "i-heroicons-clipboard-document-list",
-      //   to: "/logs",
-    },
-    {
-      label: "Customers",
-      icon: "i-heroicons-queue-list-solid",
-      //   click: () => (),
-    },
-  ],
-  [
     {
       label: "Settings",
       icon: "i-heroicons-cog-6-tooth",
-      //   to: "/settings",
+      // to: "/settings",
     },
   ],
   [

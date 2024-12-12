@@ -3,7 +3,7 @@
       <!-- sidebar -->
       <div class="hidden w-64 flex-col border-r md:flex dark:border-gray-800">
         <div class="flex h-16 items-center justify-center border-b dark:border-gray-800">
-          <span class="text-center leading-4"><span class="text-primary font-bold uppercase tracking-widest">Wodwes</span> <br /><span class="text-xs">Call Automation</span></span>
+          <span class="text-center leading-4"><span class="text-primary font-bold uppercase tracking-widest">Wodwes</span> <br /><span class="text-xs">Page Builder</span></span>
         </div>
         <Sidebar />
       </div>
@@ -17,14 +17,9 @@
               </svg>
             </button>
           </div>
-          <!-- <div class="flex items-center pr-4">
-            <ClientOnly>
-              <UButton :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" color="gray" variant="ghost" aria-label="Theme" @click="isDark = !isDark" />
-              <template #fallback>
-                <div class="h-8 w-8" />
-              </template>
-            </ClientOnly>
-          </div> -->
+          <div class="flex items-center pr-4">
+            <UAvatar icon="i-heroicons-photo" size="sm" />
+          </div>
         </div>
         <div class="p-4">
           <!-- pages -->
@@ -38,14 +33,4 @@
     title: 'Page Builder | Wodwes',
   });
   
-//   const colorMode = useColorMode();
-  
-//   const isDark = computed({
-//     get() {
-//       return colorMode.value === 'dark';
-//     },
-//     set() {
-//       colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
-//     },
-//   });
   </script>
