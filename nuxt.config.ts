@@ -21,8 +21,8 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@primevue/nuxt-module'],
-  css: ['~/assets/css/main.css'],
+  modules: ['@primevue/nuxt-module', '@vueuse/nuxt'],
+  css: ['~/assets/css/main.css', '~/assets/primeicons/primeicons.css'],
 
   postcss: {
     plugins: {
@@ -31,9 +31,9 @@ export default defineNuxtConfig({
     },
   },
 
-  imports: {
-    dirs: ['composables/*'],
-  },
+  // imports: {
+  //   dirs: ['composables/*'],
+  // },
 
   //  to customize the theme options update from the theme file located in /prime-vue/theme.js
   //  cant update the theme settings directly from the Nuxt config. only one level deep options is working other theme settings are ignored.
