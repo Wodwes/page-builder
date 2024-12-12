@@ -1,6 +1,6 @@
 <template>
-  <div>
+  <div class="m-16 space-y-8">
     <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <PVButton label="Verify" />
+    <Button label="Verify" size="small" />
   </div>
 </template>

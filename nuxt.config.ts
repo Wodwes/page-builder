@@ -13,27 +13,16 @@ export default defineNuxtConfig({
     },
   },
 
+  //  to customize the theme options update from the theme file located in /prime-vue/theme.js
+  //  cant update the theme settings directly from the Nuxt config. only one level deep options is working other theme settings are ignored.
+  //  to update the theme settings you need to update the theme file located in /prime-vue/theme.js
+
   primevue: {
-    components: {
-      prefix: "PV",
-    },
-    directives: {
-      prefix: "PV",
-    },
+    usePrimeVue: true,
 
     importPT: { as: "customPT", from: "@/prime-vue/passthrough.js" },
     importTheme: { as: "customTheme", from: "@/prime-vue/theme.js" },
 
-    options: {
-      ripple: true,
-      inputVariant: "filled",
-      theme: {
-        preset: Lara,
-        options: {
-          darkModeSelector: false,
-          cssLayer: true,
-        },
-      },
-    },
+    options: { ripple: true, inputVariant: "filled" },
   },
 });
