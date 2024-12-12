@@ -4,10 +4,6 @@ import Aura from '@primevue/themes/aura';
 export default {
     options: {
         darkModeSelector: false,
-        cssLayer: {
-            name: 'primevue',
-            order: 'tailwind-base, primevue, tailwind-utilities'
-        }
     },
     preset: definePreset(Aura, {
         semantic: {
