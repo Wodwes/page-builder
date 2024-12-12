@@ -10,7 +10,7 @@ const links = [
   [
     {
       label: " Pages",
-      icon: "material-symbols:list-alt-outline-sharp",
+      icon: "material-symbols:library-books-outline",
       // to: "/pages",
     },
     {
