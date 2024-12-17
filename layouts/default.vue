@@ -1,3 +1,10 @@
+<script setup>
+import SidebarMain from '~/components/SidebarMain.vue';
+
+useSeoMeta({
+  title: 'Page Builder | Wodwes',
+});
+</script>
 <template>
   <div class="flex h-screen">
     <!-- sidebar -->
@@ -29,10 +36,3 @@
     </div>
   </div>
 </template>
-<script setup>
-import SidebarMain from '~/components/SidebarMain.vue';
-
-useSeoMeta({
-  title: 'Page Builder | Wodwes',
-});
-</script>

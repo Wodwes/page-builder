@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-import Paragraph from './Sidebar/Paragraph/Paragraph.vue';
-import HeadingMain from './Sidebar/Headings/HeadingMain.vue';
+import Paragraph from './Sidebar/paragraph/Paragraph.vue';
+import HeadingMain from './Sidebar/headings/HeadingMain.vue';
+import ComponentsMain from './components/ComponentsMain.vue';
 
 // Tracks the currently open dropdown
 const activeDropdown = ref(null);
@@ -12,43 +13,41 @@ const toggleDropdown = (section) => {
 </script>
 
 <template>
-  <div class="border-b border-gray-300 p-4">
+  <div class="space-y-2 border-b border-gray-300 p-4">
     <!-- Components Section -->
-    <div class="rounded-md text-sm text-gray-500 transition-all duration-300 ease-in-out hover:bg-gray-100">
+    <div class="rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
       <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Components')">
         <UIcon name="material-symbols:library-books-outline" class="h-5 w-5 text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
         <h1 class="text-sm font-medium transition-all duration-300 ease-in-out group-hover:text-green-400">Components</h1>
       </div>
 
       <!-- Show components when 'Components' is active -->
-      <div v-if="activeDropdown === 'Components'" class="mt-2 flex flex-col gap-2 rounded bg-gray-100 p-3 text-gray-600">
+      <div v-if="activeDropdown === 'Components'" class="flex flex-col gap-2 rounded p-3 text-gray-600">
         <HeadingMain />
         <Paragraph />
-        <!-- styled components  -->
-        <p>Styled components</p>
+        <ComponentsMain />
       </div>
     </div>
 
     <!-- Pages Section -->
-    <div class="rounded-md text-sm text-gray-500 transition-all duration-300 ease-in-out hover:bg-gray-100">
+    <div class="rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
       <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Pages')">
-        <UIcon name="material-symbols:library-books-outline" class="h-5 w-5 text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
+        <UIcon name="material-symbols:library-books-outline" class="h-5 w-5 text-gray-500 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
         <h1 class="text-sm font-medium transition-all duration-300 ease-in-out group-hover:text-green-400">Pages</h1>
       </div>
       <!-- Dropdown content for Pages -->
-      <div v-if="activeDropdown === 'Pages'" class="mt-2 rounded bg-gray-100 p-3 text-gray-600">
+      <div v-if="activeDropdown === 'Pages'" class="mt-2 rounded p-3 text-gray-600">
         <p>Pages components</p>
       </div>
     </div>
-
     <!-- Settings Section -->
-    <div class="rounded-md text-sm text-gray-500 transition-all duration-300 ease-in-out hover:bg-gray-100">
-      <div class="group flex cursor-pointer flex-row items-center gap-1 px-2 pt-2" @click="toggleDropdown('Settings')">
+    <div class="rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
+      <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Settings')">
         <UIcon name="i-heroicons-cog-6-tooth" class="h-5 w-5 text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
         <h1 class="text-sm font-medium transition-all duration-300 ease-in-out group-hover:text-green-400">Settings</h1>
       </div>
-      <!-- Dropdown content for Settings -->
-      <div v-if="activeDropdown === 'Settings'" class="mt-2 rounded bg-gray-100 p-3 text-gray-600">
+      <!-- Dropdown content for Pages -->
+      <div v-if="activeDropdown === 'Settings'" class="mt-2 rounded p-3 text-gray-600">
         <p>Settings components</p>
       </div>
     </div>
