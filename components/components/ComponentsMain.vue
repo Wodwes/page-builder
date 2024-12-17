@@ -27,17 +27,17 @@ const togglecard = () => {
       <div @click="toggleAccordion" class="rounded-md border p-2 text-center text-sm font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400">
         <button>Accordion</button>
         <!-- Accordion Component -->
-        <div v-if="showAccordion" class="mt-2">
-          <!-- <Accordion /> -->
-        </div>
+        <!-- <div v-if="showAccordion" class="mt-2">
+          <Accordion />
+        </div> -->
       </div>
       <!-- Card Component  -->
       <div @click="togglecard" class="rounded-md border p-2 text-center text-base font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400">
         <button>Card</button>
         <!-- Accordion Component -->
-        <div v-if="showCard" class="mt-2">
-          <!-- <Card title="Card Title" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu." buttonText="Learn More" /> -->
-        </div>
+        <!-- <div v-if="showCard" class="mt-2">
+          <Card title="Card Title" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu." buttonText="Learn More" />
+        </div> -->
       </div>
     </div>
   </div>
