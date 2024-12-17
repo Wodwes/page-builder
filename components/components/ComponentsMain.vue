@@ -24,7 +24,7 @@ const togglecard = () => {
     <!-- Dropdown Content -->
     <div v-if="ComponentsDropdown" class="mt-2 grid w-full grid-cols-1 items-center justify-between gap-2 rounded-md border border-gray-300 bg-white p-2 shadow-lg">
       <!-- Pargraph -->
-      <div @click="toggleAccordion" class="rounded-md border p-2 text-center text-sm font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400">
+      <div @click="toggleAccordion" class="rounded-md border p-2 text-start text-sm font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400">
         <button>Accordion</button>
         <!-- Accordion Component -->
         <!-- <div v-if="showAccordion" class="mt-2">
@@ -32,7 +32,7 @@ const togglecard = () => {
         </div> -->
       </div>
       <!-- Card Component  -->
-      <div @click="togglecard" class="rounded-md border p-2 text-center text-base font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400">
+      <div @click="togglecard" class="rounded-md border p-2 text-start text-base font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400">
         <button>Card</button>
         <!-- Accordion Component -->
         <!-- <div v-if="showCard" class="mt-2">
