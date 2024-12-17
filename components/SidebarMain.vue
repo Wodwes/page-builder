@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import Heading from './headings/HeadingMain.vue';
-// import Para from './Para.vue';
+import Paragraph from './Sidebar/Paragraph/Paragraph.vue';
+import HeadingMain from './Sidebar/Headings/HeadingMain.vue';
 
 // Tracks the currently open dropdown
 const activeDropdown = ref(null);
@@ -21,9 +21,11 @@ const toggleDropdown = (section) => {
       </div>
 
       <!-- Show components when 'Components' is active -->
-      <div v-if="activeDropdown === 'Components'" class="mt-2 rounded bg-gray-100 p-3 text-gray-600">
-        <Heading />
-        <!-- <Para /> -->
+      <div v-if="activeDropdown === 'Components'" class="mt-2 flex flex-col gap-2 rounded bg-gray-100 p-3 text-gray-600">
+        <HeadingMain />
+        <Paragraph />
+        <!-- styled components  -->
+        <p>Styled components</p>
       </div>
     </div>
 
