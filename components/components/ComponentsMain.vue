@@ -36,7 +36,7 @@ const togglecard = () => {
         <button>Card</button>
         <!-- Accordion Component -->
         <div v-if="showCard" class="mt-2">
-          <Card title="Card Title" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu." buttonText="Learn More" />
+          <!-- <Card title="Card Title" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu." buttonText="Learn More" /> -->
         </div>
       </div>
     </div>
