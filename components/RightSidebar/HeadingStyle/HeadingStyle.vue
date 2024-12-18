@@ -18,10 +18,10 @@ defineShortcuts({
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-4">
       <p class="text-xs text-gray-500">Alignment:</p>
       <div class="flex flex-row items-center justify-evenly divide-x rounded-md border">
-        <Icon icon="mingcute:align-left-line" width="24" height="24" class="border-r p-0.5 hover:bg-gray-100" />
-        <Icon icon="mingcute:align-center-line" width="24" height="24" class="border-r p-0.5 hover:bg-gray-100" />
-        <Icon icon="mingcute:align-right-line" width="24" height="24" class="border-r p-0.5 hover:bg-gray-100" />
-        <Icon icon="mingcute:align-justify-line" width="24" height="24" class="p-0.5 hover:bg-gray-100" />
+        <Icon icon="mingcute:align-left-line" width="24" height="24" class="border-r p-0.5 text-gray-500 hover:bg-gray-100" />
+        <Icon icon="mingcute:align-center-line" width="24" height="24" class="border-r p-0.5 text-gray-500 hover:bg-gray-100" />
+        <Icon icon="mingcute:align-right-line" width="24" height="24" class="border-r p-0.5 text-gray-500 hover:bg-gray-100" />
+        <Icon icon="mingcute:align-justify-line" width="24" height="24" class="p-0.5 text-gray-500 hover:bg-gray-100" />
       </div>
     </div>
     <!-- typography section  -->
@@ -30,14 +30,21 @@ defineShortcuts({
         <p class="text-xs text-gray-500">Typography:</p>
         <div class="flex flex-row items-center justify-end rounded-md border">
           <UDropdown v-model:open="open" :items="items" :popper="{ placement: 'bottom-start' }">
-            <UButton color="white" label="Option" trailing-icon="i-heroicons-chevron-down-20-solid" />
+            <UButton color="white" label="Option" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
           </UDropdown>
         </div>
       </div>
+      <!-- Font Size  -->
       <div class="flex w-full flex-row items-center justify-around gap-6 border-b py-4">
-        <p class="text-xs text-gray-500">Font Size</p>
-        <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border">
-          <input type="number" class="w-12" />
+        <p class="text-xs text-gray-500">Font Size:</p>
+        <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
+          <input type="number" class="w-12 py-1 indent-3 text-xs" />
+        </div>
+      </div>
+      <div class="flex w-full flex-row items-center justify-around gap-6 border-b py-4">
+        <p class="text-xs text-gray-500">Font Weight:</p>
+        <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
+          <input type="number" class="w-12 py-1 indent-3 text-xs" />
         </div>
       </div>
     </div>
