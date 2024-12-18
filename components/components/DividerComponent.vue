@@ -1,12 +1,12 @@
 <script setup>
 defineProps({
-  StyledDivider: {
-    type: String,
-  },
+  height: { type: String, default: 'h-px' },
+  width: { type: String, default: 'w-full' },
+  color: { type: String, default: 'bg-gray-300' },
+  margin: { type: String, default: 'my-4' },
 });
 </script>
 
 <template>
-  <!-- Dynamically apply the Tailwind classes based on the StyledDivider prop -->
-  <div :class="StyledDivider"></div>
+  <div :class="[height, width, color, margin]"></div>
 </template>

@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 import Accordion from '../components/Accordion.vue';
 import ButtonComponent from '../components/ButtonComponent.vue';
 import Card from '../components/Card.vue';
@@ -6,6 +7,9 @@ import ImageComponent from '../components/ImageComponent.vue';
 import { Icon } from '@iconify/vue';
 import VideoComponent from '../components/VideoComponent.vue';
 import DividerComponent from '../components/DividerComponent.vue';
+import IconComponent from '../components/IconComponent.vue';
+import CarouselComponent from '../components/CarouselComponent .vue';
+import FormComponent from '../components/FormComponent.vue';
 
 const ComponentsDropdown = ref(false);
 
@@ -56,10 +60,34 @@ const components = ref([
   {
     name: 'Divider',
     component: DividerComponent,
-    icon: 'octicon:video-24',
+    icon: 'tdesign:component-divider-vertical',
     show: ref(false),
     props: {
-      StyledDivider: 'h-px w-full bg-red-800',
+      height: 'h-px',
+      width: 'w-full',
+      color: 'bg-gray-500',
+      margin: 'my-4',
+    },
+  },
+  {
+    name: 'Icon',
+    component: IconComponent,
+    icon: 'mdi:star-circle-outline',
+    show: ref(false),
+    props: {
+      icon: 'material-symbols-light:star',
+      height: '50',
+      width: '50',
+      styleClasses: 'text-red-500',
+    },
+  },
+  {
+    name: 'Form',
+    component: FormComponent,
+    icon: 'fluent:form-28-regular',
+    show: ref(false),
+    props: {
+      FormTitle: 'Form',
     },
   },
 ]);

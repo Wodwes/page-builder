@@ -1,20 +1,26 @@
 <script setup>
 import Accordion from '~/components/components/Accordion.vue';
 import Card from '~/components/components/Card.vue';
+import CarouselComponent from '~/components/components/CarouselComponent .vue';
 import DividerComponent from '~/components/components/DividerComponent.vue';
+import IconComponent from '~/components/components/IconComponent.vue';
 import ImageComponent from '~/components/components/ImageComponent.vue';
 import VideoComponent from '~/components/components/VideoComponent.vue';
+const formData = ref({
+  name: '',
+  email: '',
+});
+import { ref } from 'vue';
+import FormComponent from '~/components/components/FormComponent.vue';
+
 // definePageMeta({
 //   layout: 'MainLayout',
 // });
+const carouselItems = ['https://via.placeholder.com/600x300/FF5733/FFFFFF?text=Slide+1', 'https://via.placeholder.com/600x300/33FF57/FFFFFF?text=Slide+2', 'https://via.placeholder.com/600x300/5733FF/FFFFFF?text=Slide+3'];
 </script>
 
 <template>
-  <div class="flex w-full flex-col gap-4">
-    <!-- <Card title="Card Title" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu." buttonText="Learn More" /> -->
-    <!-- <Accordion /> -->
-    <ImageComponent ImageURL="https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?t=st=1734505442~exp=1734509042~hmac=056e0809acfab279e0b9fa4c5ceede086df3e334ea2341274d41c957450c1db3&w=740" />
-    <!-- <VideoComponent videoURL="https://www.youtube.com/watch?v=dCxSsr5xuL8" posterImage="https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?t=st=1734505442~exp=1734509042~hmac=056e0809acfab279e0b9fa4c5ceede086df3e334ea2341274d41c957450c1db3&w=740" /> -->
-    <DividerComponent StyledDivider="h-2 w-full bg-red-800" />
+  <div class="flex h-auto w-full flex-col gap-4">
+    <!-- <FormComponent v-model="formData.name" label="Full Name" name="name" placeholder="Enter your full name" customClass="border-gray-400 p-2" /> -->
   </div>
 </template>
