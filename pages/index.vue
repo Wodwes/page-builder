@@ -1,18 +1,4 @@
 <script setup>
-import Accordion from '~/components/components/Accordion.vue';
-import Card from '~/components/components/Card.vue';
-import CarouselComponent from '~/components/components/CarouselComponent .vue';
-import DividerComponent from '~/components/components/DividerComponent.vue';
-import IconComponent from '~/components/components/IconComponent.vue';
-import ImageComponent from '~/components/components/ImageComponent.vue';
-import VideoComponent from '~/components/components/VideoComponent.vue';
-const formData = ref({
-  name: '',
-  email: '',
-});
-import { ref } from 'vue';
-import FormComponent from '~/components/components/FormComponent.vue';
-
 // definePageMeta({
 //   layout: 'MainLayout',
 // });
