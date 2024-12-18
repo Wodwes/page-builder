@@ -1,15 +1,11 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { ref } from 'vue';
+definePageMeta({
+  layout: 'main-layout',
+});
 
-interface AccordionItem {
-  label: string;
-  icon: string;
-  content: string;
-  defaultOpen?: boolean;
-  disabled?: boolean;
-}
-
-const items: AccordionItem[] = [
+// Define the accordion items
+const items = [
   {
     label: 'Getting Started',
     icon: 'i-heroicons-information-circle',
@@ -43,11 +39,11 @@ const items: AccordionItem[] = [
   },
 ];
 
-// State for tracking the currently open section
-const openIndex = ref<number | null>(items.findIndex((item) => item.defaultOpen) ?? null);
+// Track the currently open section
+const openIndex = ref(items.findIndex((item) => item.defaultOpen) || null);
 
-// Function to toggle section
-const toggleSection = (index: number) => {
+// Toggle function for sections
+const toggleSection = (index) => {
   openIndex.value = openIndex.value === index ? null : index;
 };
 </script>
@@ -55,16 +51,18 @@ const toggleSection = (index: number) => {
 <template>
   <div class="space-y-2">
     <div v-for="(item, index) in items" :key="index" class="border-b last:border-b-0">
-      <div class="flex cursor-pointer items-center justify-between rounded-md bg-gray-100 p-4 transition-colors hover:bg-gray-200" :class="{ 'cursor-not-allowed text-gray-400': item.disabled }" @click="!item.disabled && toggleSection(index)">
+      <!-- Accordion Header -->
+      <div class="flex items-center justify-between rounded-md bg-gray-100 p-4 transition-colors hover:bg-gray-200" :class="{ 'cursor-not-allowed text-gray-400': item.disabled }" :role="!item.disabled ? 'button' : null" :aria-expanded="openIndex === index" @click="!item.disabled && toggleSection(index)">
         <div class="flex items-center space-x-2">
           <span :class="item.icon" class="text-xl"></span>
           <span class="font-semibold text-gray-700">{{ item.label }}</span>
         </div>
         <span class="text-lg">
-          <i v-if="openIndex === index" class="i-heroicons-chevron-up"></i>
-          <i v-else class="i-heroicons-chevron-down"></i>
+          <i :class="openIndex === index ? 'i-heroicons-chevron-up' : 'i-heroicons-chevron-down'"></i>
         </span>
       </div>
+
+      <!-- Accordion Content -->
       <div v-if="openIndex === index" class="rounded-b-md bg-gray-50 p-4 text-gray-600">
         {{ item.content }}
       </div>
@@ -73,5 +71,5 @@ const toggleSection = (index: number) => {
 </template>
 
 <style scoped>
-/* Tailwind will handle most of the styling */
+/* Tailwind manages most styles; additional styling can go here if needed */
 </style>

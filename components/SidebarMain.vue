@@ -5,7 +5,7 @@ import HeadingMain from './Sidebar/headings/HeadingMain.vue';
 import ComponentsMain from './components/ComponentsMain.vue';
 
 // Tracks the currently open dropdown
-const activeDropdown = ref(null);
+const activeDropdown = ref(true);
 
 const toggleDropdown = (section) => {
   activeDropdown.value = activeDropdown.value === section ? null : section;
