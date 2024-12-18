@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-import Paragraph from './Sidebar/paragraph/Paragraph.vue';
-import HeadingMain from './Sidebar/headings/HeadingMain.vue';
-import ComponentsMain from './components/ComponentsMain.vue';
+import HeadingMain from './Sidebar/Headings/HeadingMain.vue';
+import Paragraph from './Sidebar/Paragraph/Paragraph.vue';
+import ComponentsMain from './Sidebar/ComponentsMain.vue';
 
 // Tracks the currently open dropdown
 const activeDropdown = ref(true);

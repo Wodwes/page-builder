@@ -13,6 +13,6 @@ defineProps({
 
 <template>
   <div>
-    <button class="rounded-md border bg-white px-8 py-2 text-center">{{ title }}</button>
+    <button class="w-full rounded-md border bg-white py-2 text-center">{{ title }}</button>
   </div>
 </template>
