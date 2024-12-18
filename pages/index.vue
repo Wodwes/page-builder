@@ -1,4 +1,11 @@
 <script setup>
+const formData = ref({
+  name: '',
+  email: '',
+});
+import { ref } from 'vue';
+import FormComponent from '~/components/components/FormComponent.vue';
+
 // definePageMeta({
 //   layout: 'MainLayout',
 // });
@@ -7,6 +14,6 @@ const carouselItems = ['https://via.placeholder.com/600x300/FF5733/FFFFFF?text=S
 
 <template>
   <div class="flex h-auto w-full flex-col gap-4">
-    <!-- <FormComponent v-model="formData.name" label="Full Name" name="name" placeholder="Enter your full name" customClass="border-gray-400 p-2" /> -->
+    <FormComponent v-model="formData.name" label="Full Name" name="name" placeholder="Enter your full name" customClass="border-gray-400 p-2" />
   </div>
 </template>
