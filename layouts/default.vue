@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import RightSidebar from '../components/RightSidebar/RightSidebar.vue';
-
+import { Icon } from '@iconify/vue';
 useSeoMeta({
   title: 'Page Builder | Wodwes',
 });
@@ -13,6 +13,7 @@ const isSidebarVisible = ref(true);
 const toggleSidebar = () => {
   isSidebarVisible.value = !isSidebarVisible.value;
 };
+const isOpen = ref(false);
 </script>
 
 <template>
@@ -29,16 +30,33 @@ const toggleSidebar = () => {
       <SidebarMain />
     </div>
 
+    <!-- Mobile Sidebar (Slideover from the left) -->
+    <div class="block md:hidden">
+      <USlideover v-model="isOpen" prevent-close>
+        <UCard class="relative left-0 flex flex-1 flex-col" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800 ' }">
+          <template #header>
+            <div class="flex items-end justify-end">
+              <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
+            </div>
+            <SidebarMain />
+          </template>
+        </UCard>
+      </USlideover>
+    </div>
+
     <!-- Main Layout -->
     <div class="flex flex-1 flex-col overflow-y-auto">
       <!-- Top Navigation -->
-      <div class="max-md:shadow-sm sticky top-0 z-10 flex min-h-16 items-center justify-between border-b bg-white dark:border-gray-800 dark:bg-[#0F172A]">
+      <div class="max-md:shadow-sm sticky top-0 z-10 flex min-h-16 items-center justify-between border-b dark:border-gray-800 dark:bg-[#0F172A]">
         <div class="flex items-center px-4">
-          <button @click="toggleSidebar" class="text-gray-500 focus:text-gray-700 focus:outline-none">
+          <button @click="toggleSidebar" class="z-10 hidden text-gray-500 focus:text-gray-700 focus:outline-none md:block">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
+          <div class="block md:hidden">
+            <UButton icon="lucide:align-justify" size="sm" class="bg-white text-gray-500" variant="outline" :trailing="false" @click="isOpen = true" />
+          </div>
         </div>
         <div class="flex items-center pr-4">
           <UAvatar icon="i-heroicons-photo" size="sm" />
@@ -51,7 +69,7 @@ const toggleSidebar = () => {
           <slot />
         </div>
         <!-- Right Sidebar -->
-        <div class="border-gray-9 hidden h-screen w-80 border-l md:max-w-80 lg:flex dark:bg-gray-900">
+        <div class="border-gray-9 hidden h-auto min-h-screen w-80 border-l md:max-w-80 lg:flex dark:bg-gray-900">
           <RightSidebar />
         </div>
       </div>

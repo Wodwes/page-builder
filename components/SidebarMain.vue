@@ -13,7 +13,7 @@ const toggleDropdown = (section) => {
 </script>
 
 <template>
-  <div class="border-gray-9 h-auto space-y-2 border-b p-4">
+  <div class="border-gray-9 h-auto space-y-2 border-b px-4 py-2">
     <!-- Components Section -->
     <div class="rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
       <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Components')">
@@ -54,14 +54,16 @@ const toggleDropdown = (section) => {
   </div>
 
   <!-- Help Section -->
-  <div class="mt-1 rounded-md px-4 text-sm text-gray-500 transition-all duration-300 ease-in-out">
-    <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Help')">
-      <UIcon name="i-heroicons-question-mark-circle" class="h-5 w-5 text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
-      <h1 class="text-sm font-medium transition-all duration-300 ease-in-out group-hover:text-green-400">Help</h1>
-    </div>
-    <!-- Dropdown content for Help -->
-    <div v-if="activeDropdown === 'Help'" class="mt-2 rounded bg-gray-100 p-3 text-gray-600">
-      <p>Help components</p>
+  <div class="mt-2 px-4">
+    <div class="rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
+      <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Help')">
+        <UIcon name="i-heroicons-question-mark-circle" class="h-5 w-5 text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
+        <h1 class="text-sm font-medium transition-all duration-300 ease-in-out group-hover:text-green-400">Help</h1>
+      </div>
+      <!-- Dropdown content for Help -->
+      <div v-if="activeDropdown === 'Help'" class="mt-2 rounded p-3 text-gray-600">
+        <p>Help components</p>
+      </div>
     </div>
   </div>
 </template>

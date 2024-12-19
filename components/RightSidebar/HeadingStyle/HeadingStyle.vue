@@ -73,7 +73,9 @@ const PaddingValidate = (event) => {
       <p class="text-xs text-gray-500">Alignment:</p>
       <div class="flex flex-row items-center justify-evenly divide-x rounded-md border">
         <template v-for="(alignment, index) in alignments" :key="index">
-          <Icon :icon="alignment.icon" width="24" height="24" class="p-0.5 text-gray-500 hover:bg-gray-100" :class="{ 'border-r': index < alignments.length - 1 }" />
+          <button>
+            <Icon :icon="alignment.icon" width="24" height="24" class="p-0.5 text-gray-500 hover:bg-gray-100" :class="{ 'border-r': index < alignments.length - 1 }" />
+          </button>
         </template>
       </div>
     </div>
