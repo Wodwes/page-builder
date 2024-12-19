@@ -45,10 +45,28 @@ const LineHeightValidate = (event) => {
     input.value = 88;
   }
 };
+const MarginValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  }
+};
+const PaddingValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  }
+};
 </script>
 
 <template>
-  <div class="max-w-72 overflow-hidden p-4">
+  <div class="max-w-80 overflow-hidden p-4">
     <h1 class="mb-2 text-sm font-bold text-gray-800">Heading</h1>
     <!-- Alignment Section -->
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-3">
@@ -152,6 +170,29 @@ const LineHeightValidate = (event) => {
         <input type="color" class="w-6 bg-white p-1 indent-3 text-xs" />
       </div>
     </div>
+    <!-- margin  -->
+    <div class="flex w-full flex-col items-start justify-between gap-2 border-b pb-3 pt-2">
+      <p class="text-start text-xs text-gray-500">Margin:</p>
+      <div class="box-content grid w-full grid-cols-5 items-center gap-2 divide-x rounded-md border text-xs text-gray-500">
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div class="flex items-center justify-center px-2">PX</div>
+      </div>
+    </div>
+    <!-- Padding  -->
+    <div class="flex w-full flex-col items-start justify-between gap-2 border-b pb-3 pt-2">
+      <p class="text-start text-xs text-gray-500">Padding:</p>
+      <div class="box-content grid w-full grid-cols-5 items-center gap-2 divide-x rounded-md border text-xs text-gray-500">
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div class="flex items-center justify-center px-2">PX</div>
+      </div>
+    </div>
+
     <!-- main div end  -->
   </div>
 </template>

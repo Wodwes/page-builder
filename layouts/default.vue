@@ -51,7 +51,7 @@ const toggleSidebar = () => {
           <slot />
         </div>
         <!-- Right Sidebar -->
-        <div class="border-gray-9 hidden h-screen w-72 border-l md:max-w-72 lg:flex dark:bg-gray-900">
+        <div class="border-gray-9 hidden h-screen w-80 border-l md:max-w-80 lg:flex dark:bg-gray-900">
           <RightSidebar />
         </div>
       </div>
