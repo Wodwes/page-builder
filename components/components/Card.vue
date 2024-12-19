@@ -18,7 +18,7 @@ defineProps({
 });
 </script>
 <template>
-  <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+  <div class="overflow-hidden rounded-lg bg-white">
     <!-- Card Header with Demo Data -->
     <div class="mb-4 flex h-8 items-center justify-center">
       <span class="text-lg font-semibold text-gray-700">{{ title }}</span>

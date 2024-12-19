@@ -105,10 +105,10 @@ const ComponentsToggle = () => {
 <template>
   <div class="relative">
     <!-- Dropdown Toggle Button -->
-    <button class="w-full rounded-md border bg-white p-3 text-left font-semibold text-gray-500 shadow-sm transition-colors duration-300 hover:text-green-400 focus:outline-none" @click="ComponentsToggle">Components</button>
+    <button class="w-full rounded-md border bg-white p-3 text-left font-semibold text-gray-500 transition-colors duration-300 hover:text-green-400 focus:outline-none" @click="ComponentsToggle">Components</button>
 
     <!-- Dropdown Content -->
-    <div v-if="ComponentsDropdown" class="mt-2 grid w-full grid-cols-1 items-center justify-between gap-2 rounded-md border bg-white p-2 shadow-lg">
+    <div v-if="ComponentsDropdown" class="mt-2 grid w-full grid-cols-1 items-center justify-between gap-2 rounded-md border bg-white p-2">
       <!-- Loop through components -->
       <div v-for="(component, index) in components" :key="component.name" @click="toggleComponent(index)" class="rounded-md p-1 text-start text-base font-medium text-gray-500 transition-colors duration-300 hover:text-green-400">
         <div class="flex flex-row items-center gap-2">

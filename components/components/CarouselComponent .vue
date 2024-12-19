@@ -93,10 +93,10 @@ const goToSlide = (index) => {
     <!-- Custom Controls -->
     <div v-if="props.showControls" class="absolute top-1/2 flex w-full -translate-y-1/2 transform justify-between px-4">
       <!-- Previous Button -->
-      <button @click="prevSlide" class="rounded-full bg-gray-500 p-2 text-white shadow-lg">Prev</button>
+      <button @click="prevSlide" class="rounded-full bg-gray-500 p-2 text-white">Prev</button>
 
       <!-- Next Button -->
-      <button @click="nextSlide" class="rounded-full bg-gray-500 p-2 text-white shadow-lg">Next</button>
+      <button @click="nextSlide" class="rounded-full bg-gray-500 p-2 text-white">Next</button>
     </div>
 
     <!-- Dots Navigation -->
