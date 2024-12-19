@@ -1,30 +1,8 @@
-<script setup>
-import { Icon } from '@iconify/vue';
-
-// Define an array of alignment options
-const alignments = [
-  { icon: 'humbleicons:align-objects-left', label: 'Align Left' },
-  { icon: 'mdi:format-horizontal-align-center', label: 'Align Center' },
-  { icon: 'mdi:format-horizontal-align-right', label: 'Align Right' },
-  { icon: 'gravity-ui:chevrons-expand-from-line', label: 'Align Justify' },
-];
-</script>
+<script setup></script>
 
 <template>
   <div class="h-auto min-h-screen w-full max-w-80 overflow-hidden p-4">
-    <h1 class="mb-2 text-sm font-bold text-gray-800">Button</h1>
-    <!-- Alignment Section -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-3">
-      <p class="text-xs text-gray-500">Alignment:</p>
-      <div class="flex flex-row items-center justify-evenly divide-x rounded-md border">
-        <template v-for="(alignment, index) in alignments" :key="index">
-          <button>
-            <Icon :icon="alignment.icon" width="24" height="24" class="p-0.5 text-gray-500 hover:bg-gray-100" :class="{ 'border-r': index < alignments.length - 1 }" />
-          </button>
-        </template>
-      </div>
-    </div>
-
+    <h1 class="mb-2 text-sm font-bold text-gray-800">Image</h1>
     <!-- Button Text Section -->
     <div class="flex w-full flex-col border-b py-2">
       <p class="object-fill text-start text-xs text-gray-500">Button Text:</p>
@@ -44,78 +22,6 @@ const alignments = [
       <p class="object-fill text-start text-xs text-gray-500">Icon:</p>
       <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
         <input type="file" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="Link" />
-      </div>
-    </div>
-    <!-- Font Family section  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
-      <p class="text-xs text-gray-500">Font Family:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="FontFamilyDropdown" :items="items" :popper="{ placement: 'bottom-start' }" class="text-xs">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
-      </div>
-    </div>
-    <!-- Font Size  -->
-    <div class="flex w-full flex-row items-center justify-between border-b py-2">
-      <p class="text-start text-xs text-gray-500">Font Size:</p>
-      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input @input="FontSizeValidate" type="number" class="w-12 py-1 indent-3 text-xs" min="0" max="200" placeholder="0" />
-      </div>
-    </div>
-    <!-- Link Section -->
-    <div class="flex w-full flex-row items-center gap-5 border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Link:</p>
-      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="text" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="#" />
-      </div>
-    </div>
-
-    <!-- Font Weight  -->
-    <div class="flex w-full flex-row items-center justify-between border-b py-2">
-      <p class="text-start text-xs text-gray-500">Font Weight:</p>
-      <!-- <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="number" class="w-12 py-1 indent-3 text-xs" />
-      </div> -->
-      <UDropdown v-model:open="FontWeightDropdown" :items="FontWeightItems" :popper="{ placement: 'bottom-start' }" class="text-xs">
-        <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-        <template #item="{ item }">
-          <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-            {{ item.label }}
-          </div>
-        </template>
-      </UDropdown>
-    </div>
-    <!-- text transform  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
-      <p class="text-xs text-gray-500">Text Transform:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="TranformDropdown" :items="TranformItems" :popper="{ placement: 'bottom-start' }">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
-      </div>
-    </div>
-    <!-- Text Style  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
-      <p class="text-xs text-gray-500">Text Style:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="TextStyleDropdown" :items="TextStyleItems" :popper="{ placement: 'bottom-start' }">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
       </div>
     </div>
     <!-- Text Color  -->

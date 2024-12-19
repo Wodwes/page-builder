@@ -98,14 +98,14 @@ const PaddingValidate = (event) => {
     <div class="flex w-full flex-row items-center justify-between border-b py-2">
       <p class="text-start text-xs text-gray-500">Font Size:</p>
       <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input @input="FontSizeValidate" type="number" class="w-12 py-1 indent-3 text-xs" min="0" max="200" />
+        <input @input="FontSizeValidate" type="number" class="w-12 py-1 indent-3 text-xs" min="0" max="200" placeholder="0" />
       </div>
     </div>
-    <!-- Button Link Section -->
-    <div class="flex w-full flex-col border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Button Link:</p>
+    <!-- Link Section -->
+    <div class="flex w-full flex-row items-center gap-5 border-b py-2">
+      <p class="object-fill text-start text-xs text-gray-500">Link:</p>
       <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="text" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="Link" />
+        <input type="text" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="#" />
       </div>
     </div>
 

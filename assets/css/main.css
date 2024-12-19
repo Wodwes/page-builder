@@ -12,11 +12,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary dark:bg-primary;
+    @apply bg-gray-400 dark:bg-gray-600; /* Use gray colors for the scrollbar thumb */
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #555; /* Darker gray on hover */
   }
 
   * {
