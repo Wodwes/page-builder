@@ -1,8 +1,9 @@
+<!-- image/ icons/video -->
 <script setup>
 import { Icon } from '@iconify/vue';
 const width = ref(0);
 const height = ref(0);
-const TranformItems = [[{ label: 'Thumbnails (150 x 150 )' }, { label: 'Medium(300 x 300)' }, { label: 'Medium Large(768 x 768)' }, { label: 'Large (1024 x 1024)' }, { label: '1536 x 1536 - 1536 x 1536' }, { label: '2048 x 2048 - 2048 x 15320486' }, { label: 'Full' }, { label: 'Custom' }]];
+const TranformItems = [[{ label: 'Thumbnails (150 x 150 )' }, { label: 'Medium(300 x 300)' }, { label: 'Medium Large(768 x 768)' }, { label: 'Large (1024 x 1024)' }, { label: '1536 x 1536 - 1536 x 1536' }, { label: '2048 x 2048 - 2048 x 2048' }, { label: 'Full' }, { label: 'Custom' }]];
 const TranformDropdown = ref(false);
 // Define an array of alignment options
 const alignments = [

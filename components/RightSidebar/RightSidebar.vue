@@ -2,6 +2,7 @@
 import AccordionStyle from './AccordionStyle/AccordionStyle.vue';
 import ButtonStyle from './ButtonStyle/ButtonStyle.vue';
 import HeadingStyle from './HeadingStyle/HeadingStyle.vue';
+import Divider from './Divider/Divider.vue';
 
 import ImageStyle from './ImageStyle/ImageStyle.vue';
 
@@ -14,7 +15,8 @@ definePageMeta({
   <div class="h-screen w-full overflow-y-auto">
     <!-- <HeadingStyle /> -->
     <!-- AccordionStyle pending  -->
-    <ImageStyle />
+    <Divider />
+    <!-- <ImageStyle /> -->
     <!-- <ButtonStyle /> -->
     <!-- <AccordionStyle /> -->
   </div>
