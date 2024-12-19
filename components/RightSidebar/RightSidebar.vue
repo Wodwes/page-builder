@@ -13,9 +13,9 @@ definePageMeta({
 
 <template>
   <div class="h-screen w-full overflow-y-auto">
-    <!-- <HeadingStyle /> -->
+    <HeadingStyle />
     <!-- AccordionStyle pending  -->
-    <Divider />
+    <!-- <Divider /> -->
     <!-- <ImageStyle /> -->
     <!-- <ButtonStyle /> -->
     <!-- <AccordionStyle /> -->
