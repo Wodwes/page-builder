@@ -31,7 +31,7 @@ const FontSizeValidate = (event) => {
     <div class="flex w-full flex-col border-b pb-2">
       <p class="mb-2 object-fill text-start text-xs text-gray-500">Upload Image:</p>
       <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <div class="w-full rounded-md border-2 border-dashed border-gray-300 py-4 text-center">
+        <div class="w-full rounded-md border-2 border-dashed py-4 text-center">
           <input type="file" id="file-upload" class="hidden" />
           <label for="file-upload" class="inline-block cursor-pointer rounded border px-4 py-2 text-sm font-medium text-gray-500"> Choose File </label>
           <p class="mt-2 text-sm text-gray-500">Drag and drop your image here or click to upload</p>

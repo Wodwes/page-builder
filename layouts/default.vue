@@ -69,7 +69,7 @@ const isOpen = ref(false);
           <slot />
         </div>
         <!-- Right Sidebar -->
-        <div class="border-gray-9 hidden h-auto min-h-screen w-80 border-l md:max-w-80 lg:flex dark:bg-gray-900">
+        <div class="hidden h-auto min-h-screen w-80 border-l md:max-w-80 lg:flex dark:bg-gray-900">
           <RightSidebar />
         </div>
       </div>
