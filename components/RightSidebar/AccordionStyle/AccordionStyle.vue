@@ -67,7 +67,7 @@ const PaddingValidate = (event) => {
 
 <template>
   <div class="max-w-80 overflow-hidden p-4">
-    <h1 class="mb-2 text-sm font-bold text-gray-800">Heading</h1>
+    <h1 class="mb-2 text-sm font-bold text-gray-800">Accordion</h1>
     <!-- Alignment Section -->
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-3">
       <p class="text-xs text-gray-500">Alignment:</p>

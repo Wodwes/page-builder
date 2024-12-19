@@ -8,6 +8,62 @@ const alignments = [
   { icon: 'mdi:format-horizontal-align-right', label: 'Align Right' },
   { icon: 'gravity-ui:chevrons-expand-from-line', label: 'Align Justify' },
 ];
+const items = [[{ label: 'Roboto' }, { label: 'Open Sans' }, { label: 'Poppins' }, { label: 'Inter' }, { label: 'Lato' }, { label: 'Merriweather' }, { label: 'Playfair Display' }, { label: 'Source Code Pro' }, { label: 'Courier New' }, { label: 'Georgia' }]];
+const FontFamilyDropdown = ref(false);
+defineShortcuts({ o: () => (open.value = !open.value) });
+
+const FontWeightItems = [[{ label: '100 (Thin)' }, { label: '200 (extralight)' }, { label: '300 (light)' }, { label: '400 (normal)' }, { label: '500 (medium)' }, { label: '600 (semibold)' }, { label: '700 (bold)' }, { label: '800 (extrabold)' }, { label: '900 (black)' }]];
+const FontWeightDropdown = ref(false);
+
+const TranformItems = [[{ label: 'Uppercase' }, { label: 'Lowercase' }, { label: 'Capitalize' }, { label: 'Normal' }]];
+const TranformDropdown = ref(false);
+
+const TextStyleItems = [[{ label: 'Normal' }, { label: 'Italic' }]];
+const TextStyleDropdown = ref(false);
+
+const DecorationItems = [[{ label: 'Underline' }, { label: 'Overline' }, { label: 'Line Through' }, { label: 'None' }]];
+const DecorationDropdown = ref(false);
+
+const FontSizeValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  } else if (value > 200) {
+    input.value = 200;
+  }
+};
+const LineHeightValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  } else if (value > 88) {
+    input.value = 88;
+  }
+};
+const MarginValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min  values
+  if (value < 0) {
+    input.value = 0;
+  }
+};
+const PaddingValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  }
+};
 </script>
 
 <template>
@@ -154,10 +210,10 @@ const alignments = [
     <div class="flex w-full flex-col items-start justify-between border-b pb-3 pt-2">
       <p class="mb-1 text-start text-xs text-gray-500">Padding:</p>
       <div class="box-content grid w-full grid-cols-5 items-center gap-2 divide-x rounded-md border text-xs text-gray-500">
-        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
-        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
-        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
-        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="MarginValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="PaddingValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="PaddingValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="PaddingValidate" /></div>
+        <div><input type="number" class="mx-2 w-full py-1 text-xs focus:outline-none" @input="PaddingValidate" /></div>
         <div class="flex items-center justify-center px-2">PX</div>
       </div>
       <div class="box-content grid w-full grid-cols-5 items-center gap-1 px-2 text-[10px] text-gray-500">
