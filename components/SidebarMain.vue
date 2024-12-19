@@ -15,7 +15,7 @@ const toggleDropdown = (section) => {
 <template>
   <div class="h-auto space-y-2 border-b px-4 py-2">
     <!-- Components Section -->
-    <div class="rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
+    <div class="b rounded-md border text-sm text-gray-500 transition-all duration-300 ease-in-out">
       <div class="group flex cursor-pointer flex-row items-center gap-1 p-2" @click="toggleDropdown('Components')">
         <UIcon name="material-symbols:library-books-outline" class="h-5 w-5 text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-700" />
         <h1 class="text-sm font-medium transition-all duration-300 ease-in-out group-hover:text-green-400">Components</h1>
