@@ -1,52 +1,157 @@
 <script setup>
 import { Icon } from '@iconify/vue';
 const items = [[{ label: 'Roboto' }, { label: 'Open Sans' }, { label: 'Poppins' }, { label: 'Inter' }, { label: 'Lato' }, { label: 'Merriweather' }, { label: 'Playfair Display' }, { label: 'Source Code Pro' }, { label: 'Courier New' }, { label: 'Georgia' }]];
+const FontFamilyDropdown = ref(false);
+defineShortcuts({ o: () => (open.value = !open.value) });
 
-console.log(items);
+const FontWeightItems = [[{ label: '100 (Thin)' }, { label: '200 (extralight)' }, { label: '300 (light)' }, { label: '400 (normal)' }, { label: '500 (medium)' }, { label: '600 (semibold)' }, { label: '700 (bold)' }, { label: '800 (extrabold)' }, { label: '900 (black)' }]];
+const FontWeightDropdown = ref(false);
 
-const open = ref(false);
+const TranformItems = [[{ label: 'Uppercase' }, { label: 'Lowercase' }, { label: 'Capitalize' }, { label: 'Normal' }]];
+const TranformDropdown = ref(false);
 
-defineShortcuts({
-  o: () => (open.value = !open.value),
-});
+const TextStyleItems = [[{ label: 'Normal' }, { label: 'Italic' }]];
+const TextStyleDropdown = ref(false);
+
+const DecorationItems = [[{ label: 'Underline' }, { label: 'Overline' }, { label: 'Line Through' }, { label: 'None' }]];
+const DecorationDropdown = ref(false);
+
+// Define an array of alignment options
+const alignments = [
+  { icon: 'mingcute:align-left-line', label: 'Align Left' },
+  { icon: 'mingcute:align-center-line', label: 'Align Center' },
+  { icon: 'mingcute:align-right-line', label: 'Align Right' },
+  { icon: 'mingcute:align-justify-line', label: 'Align Justify' },
+];
+const FontSizeValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  } else if (value > 200) {
+    input.value = 200;
+  }
+};
+const LineHeightValidate = (event) => {
+  const input = event.target;
+  const value = parseInt(input.value, 10);
+
+  // Enforce min and max values
+  if (value < 0) {
+    input.value = 0;
+  } else if (value > 88) {
+    input.value = 88;
+  }
+};
 </script>
 
 <template>
   <div class="max-w-72 overflow-hidden p-4">
-    <h1 class="mb-2 text-sm font-bold text-gray-500">Heading</h1>
+    <h1 class="mb-2 text-sm font-bold text-gray-800">Heading</h1>
     <!-- Alignment Section -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-4">
+    <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-3">
       <p class="text-xs text-gray-500">Alignment:</p>
       <div class="flex flex-row items-center justify-evenly divide-x rounded-md border">
-        <Icon icon="mingcute:align-left-line" width="24" height="24" class="border-r p-0.5 text-gray-500 hover:bg-gray-100" />
-        <Icon icon="mingcute:align-center-line" width="24" height="24" class="border-r p-0.5 text-gray-500 hover:bg-gray-100" />
-        <Icon icon="mingcute:align-right-line" width="24" height="24" class="border-r p-0.5 text-gray-500 hover:bg-gray-100" />
-        <Icon icon="mingcute:align-justify-line" width="24" height="24" class="p-0.5 text-gray-500 hover:bg-gray-100" />
+        <template v-for="(alignment, index) in alignments" :key="index">
+          <Icon :icon="alignment.icon" width="24" height="24" class="p-0.5 text-gray-500 hover:bg-gray-100" :class="{ 'border-r': index < alignments.length - 1 }" />
+        </template>
       </div>
     </div>
-    <!-- typography section  -->
-    <div class="flex flex-col gap-2">
-      <div class="flex w-full flex-row items-center justify-around gap-6 border-b py-4">
-        <p class="text-xs text-gray-500">Typography:</p>
-        <div class="flex flex-row items-center justify-end rounded-md border">
-          <UDropdown v-model:open="open" :items="items" :popper="{ placement: 'bottom-start' }">
-            <UButton color="white" label="Option" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          </UDropdown>
-        </div>
-      </div>
-      <!-- Font Size  -->
-      <div class="flex w-full flex-row items-center justify-around gap-6 border-b py-4">
-        <p class="text-xs text-gray-500">Font Size:</p>
-        <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-          <input type="number" class="w-12 py-1 indent-3 text-xs" />
-        </div>
-      </div>
-      <div class="flex w-full flex-row items-center justify-around gap-6 border-b py-4">
-        <p class="text-xs text-gray-500">Font Weight:</p>
-        <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-          <input type="number" class="w-12 py-1 indent-3 text-xs" />
-        </div>
+
+    <!-- Font Family section  -->
+    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
+      <p class="text-xs text-gray-500">Font Family:</p>
+      <div class="flex flex-row items-center justify-end rounded-md border">
+        <UDropdown v-model:open="FontFamilyDropdown" :items="items" :popper="{ placement: 'bottom-start' }" class="text-xs">
+          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
+          <template #item="{ item }">
+            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
+              {{ item.label }}
+            </div>
+          </template>
+        </UDropdown>
       </div>
     </div>
+    <!-- Font Size  -->
+    <div class="flex w-full flex-row items-center justify-between border-b py-2">
+      <p class="text-start text-xs text-gray-500">Font Size:</p>
+      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
+        <input @input="FontSizeValidate" type="number" class="w-12 py-1 indent-3 text-xs" min="0" max="200" />
+      </div>
+    </div>
+    <!-- Font Weight  -->
+    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
+      <p class="text-start text-xs text-gray-500">Font Weight:</p>
+      <!-- <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
+        <input type="number" class="w-12 py-1 indent-3 text-xs" />
+      </div> -->
+      <UDropdown v-model:open="FontWeightDropdown" :items="FontWeightItems" :popper="{ placement: 'bottom-start' }" class="text-xs">
+        <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
+        <template #item="{ item }">
+          <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
+            {{ item.label }}
+          </div>
+        </template>
+      </UDropdown>
+    </div>
+    <!-- text transform  -->
+    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
+      <p class="text-xs text-gray-500">Text Transform:</p>
+      <div class="flex flex-row items-center justify-end rounded-md border">
+        <UDropdown v-model:open="TranformDropdown" :items="TranformItems" :popper="{ placement: 'bottom-start' }">
+          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
+          <template #item="{ item }">
+            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
+              {{ item.label }}
+            </div>
+          </template>
+        </UDropdown>
+      </div>
+    </div>
+    <!-- Text Style  -->
+    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
+      <p class="text-xs text-gray-500">Text Style:</p>
+      <div class="flex flex-row items-center justify-end rounded-md border">
+        <UDropdown v-model:open="TextStyleDropdown" :items="TextStyleItems" :popper="{ placement: 'bottom-start' }">
+          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
+          <template #item="{ item }">
+            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
+              {{ item.label }}
+            </div>
+          </template>
+        </UDropdown>
+      </div>
+    </div>
+    <!-- Text Decoration  -->
+    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
+      <p class="text-xs text-gray-500">Text Decoration:</p>
+      <div class="flex flex-row items-center justify-end rounded-md border">
+        <UDropdown v-model:open="DecorationDropdown" :items="DecorationItems" :popper="{ placement: 'bottom-start' }">
+          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
+          <template #item="{ item }">
+            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
+              {{ item.label }}
+            </div>
+          </template>
+        </UDropdown>
+      </div>
+    </div>
+    <!-- Line Height  -->
+    <div class="flex w-full flex-row items-center justify-between border-b py-2">
+      <p class="text-start text-xs text-gray-500">Line Height:</p>
+      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
+        <input @input="LineHeightValidate" type="number" class="w-12 py-1 indent-3 text-xs" min="0" max="200" />
+      </div>
+    </div>
+    <!-- Line Height  -->
+    <div class="flex w-full flex-row items-center justify-between border-b py-2">
+      <p class="text-start text-xs text-gray-500">Text Color:</p>
+      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
+        <input type="color" class="w-6 bg-white p-1 indent-3 text-xs" />
+      </div>
+    </div>
+    <!-- main div end  -->
   </div>
 </template>
