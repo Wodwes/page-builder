@@ -61,7 +61,7 @@ const FontSizeValidate = (event) => {
       </div>
     </div>
     <!-- Link Section -->
-    <LinkComponent />
+    <LinkComponent label="link" />
 
     <!-- Alignment Section -->
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-3">

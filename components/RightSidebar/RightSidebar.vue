@@ -1,8 +1,8 @@
 <script setup>
 import AccordionStyle from './AccordionStyle/AccordionStyle.vue';
 import ButtonStyle from './ButtonStyle/ButtonStyle.vue';
-import HeadingStyle from './HeadingStyle/HeadingStyle.vue';
 import Divider from './Divider/Divider.vue';
+import HeadingStyle from './HeadingStyle/HeadingStyle.vue';
 
 import ImageStyle from './ImageStyle/ImageStyle.vue';
 
@@ -13,10 +13,10 @@ definePageMeta({
 
 <template>
   <div class="h-auto min-h-screen w-full overflow-y-auto">
-    <!-- <HeadingStyle /> -->
+    <HeadingStyle />
     <!-- <Divider /> -->
     <!-- <ImageStyle /> -->
-    <!-- <ButtonStyle /> -->
-    <AccordionStyle />
+    <ButtonStyle />
+    <!-- <AccordionStyle /> -->
   </div>
 </template>

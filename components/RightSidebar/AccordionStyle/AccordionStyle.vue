@@ -48,7 +48,7 @@ const alignments = [
     <!-- Font Size  -->
     <FontSize />
     <!-- Link Section -->
-    <LinkComponent />
+    <LinkComponent label="link" />
 
     <!-- Font Weight  -->
     <FontWeight />
