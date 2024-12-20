@@ -7,6 +7,7 @@ import TextColorComponent from '~/components/Reusable/TextColorComponent.vue';
 import LinkComponent from '../AccordionStyle/LinkComponent.vue';
 import FontWeight from '~/components/Reusable/FontWeight.vue';
 import ButtonText from '~/components/Reusable/ButtonText.vue';
+import DropdownComponent from '~/components/Reusable/DropdownComponent.vue';
 
 // Define an array of alignment options
 const alignments = [
@@ -15,18 +16,14 @@ const alignments = [
   { icon: 'mdi:format-horizontal-align-right', label: 'Align Right' },
   { icon: 'gravity-ui:chevrons-expand-from-line', label: 'Align Justify' },
 ];
-const items = [[{ label: 'Roboto' }, { label: 'Open Sans' }, { label: 'Poppins' }, { label: 'Inter' }, { label: 'Lato' }, { label: 'Merriweather' }, { label: 'Playfair Display' }, { label: 'Source Code Pro' }, { label: 'Courier New' }, { label: 'Georgia' }]];
-const FontFamilyDropdown = ref(false);
+const Fontitems = [[{ label: 'Roboto' }, { label: 'Open Sans' }, { label: 'Poppins' }, { label: 'Inter' }, { label: 'Lato' }, { label: 'Merriweather' }, { label: 'Playfair Display' }, { label: 'Source Code Pro' }, { label: 'Courier New' }, { label: 'Georgia' }]];
 defineShortcuts({ o: () => (open.value = !open.value) });
 
 const FontWeightItems = [[{ label: '100 (Thin)' }, { label: '200 (extralight)' }, { label: '300 (light)' }, { label: '400 (normal)' }, { label: '500 (medium)' }, { label: '600 (semibold)' }, { label: '700 (bold)' }, { label: '800 (extrabold)' }, { label: '900 (black)' }]];
-const FontWeightDropdown = ref(false);
 
 const TranformItems = [[{ label: 'Uppercase' }, { label: 'Lowercase' }, { label: 'Capitalize' }, { label: 'Normal' }]];
-const TranformDropdown = ref(false);
 
 const TextStyleItems = [[{ label: 'Normal' }, { label: 'Italic' }]];
-const TextStyleDropdown = ref(false);
 
 const DecorationItems = [[{ label: 'Underline' }, { label: 'Overline' }, { label: 'Line Through' }, { label: 'None' }]];
 const DecorationDropdown = ref(false);
@@ -99,53 +96,28 @@ const PaddingValidate = (event) => {
         <input type="file" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="Link" />
       </div>
     </div>
-    <!-- Font Family section  -->
-    <FontFamily />
+
     <!-- Font Size  -->
     <FontSize />
     <!-- Link Section -->
     <LinkComponent label="link" />
+    <!-- Font Family section  -->
+    <DropdownComponent label="Font Family" :DropdownItems="Fontitems" />
 
     <!-- Font Weight  -->
-    <FontWeight />
+    <DropdownComponent label="Font Weight" :DropdownItems="FontWeightItems" />
+
     <!-- text transform  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
-      <p class="text-xs text-gray-500">Text Transform:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="TranformDropdown" :items="TranformItems" :popper="{ placement: 'bottom-start' }">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
-      </div>
-    </div>
+    <DropdownComponent label="Text Transform" :DropdownItems="TranformItems" />
+
     <!-- Text Style  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
-      <p class="text-xs text-gray-500">Text Style:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="TextStyleDropdown" :items="TextStyleItems" :popper="{ placement: 'bottom-start' }">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
-      </div>
-    </div>
+    <DropdownComponent label="Text Style" :DropdownItems="TextStyleItems" />
+
     <!-- Text Color  -->
     <TextColorComponent />
 
     <!-- Background Color  -->
-    <div class="flex w-full flex-row items-center justify-between border-b py-2">
-      <p class="text-start text-xs text-gray-500">Background Color:</p>
-      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="color" class="w-6 bg-white p-1 indent-3 text-xs" />
-      </div>
-    </div>
+    <TextColorComponent label="Background Color" />
     <!-- margin  -->
     <PaddingMarginComponent label="Margin" />
 

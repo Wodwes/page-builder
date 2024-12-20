@@ -13,7 +13,6 @@ defineProps({
 const Dropdown = ref(false);
 </script>
 <template>
-  <!-- text transform  -->
   <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
     <p class="text-xs text-gray-500">{{ label }}</p>
     <div class="flex flex-row items-center justify-end rounded-md border">

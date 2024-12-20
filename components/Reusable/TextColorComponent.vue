@@ -1,4 +1,12 @@
-<script setup></script>
+<script setup>
+defineProps({
+  label: {
+    type: String,
+    required: true,
+    default: 'Undefined',
+  },
+});
+</script>
 <template>
   <div class="flex w-full flex-row items-center justify-between border-b py-2">
     <p class="text-start text-xs text-gray-500">Text Color:</p>

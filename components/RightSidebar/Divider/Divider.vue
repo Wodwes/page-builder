@@ -1,11 +1,13 @@
 <!-- image/ icons/video -->
 <script setup>
 import { Icon } from '@iconify/vue';
+import DropdownComponent from '~/components/Reusable/DropdownComponent.vue';
+import RangeComponent from '~/components/Reusable/RangeComponent.vue';
 import TextColorComponent from '~/components/Reusable/TextColorComponent.vue';
 const width = ref(0);
 const Weight = ref(0);
 const gap = ref(0);
-const TranformItems = [[{ label: 'Solid ' }, { label: 'Dotted ' }, { label: 'Dashed ' }, { label: 'Double ' }, { label: 'Groove ' }, { label: 'Ridge ' }, { label: 'Inset ' }, { label: 'Outset ' }]];
+const styleItems = [[{ label: 'Solid ' }, { label: 'Dotted ' }, { label: 'Dashed ' }, { label: 'Double ' }, { label: 'Groove ' }, { label: 'Ridge ' }, { label: 'Inset ' }, { label: 'Outset ' }]];
 const TranformDropdown = ref(false);
 // Define an array of alignment options
 const alignments = [
@@ -30,43 +32,20 @@ const FontSizeValidate = (event) => {
   <div class="h-auto w-full max-w-80 overflow-hidden p-4">
     <h1 class="mb-2 text-sm font-bold text-gray-800">Divider</h1>
     <!-- Image Resolution  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b pb-2">
-      <p class="text-xs text-gray-500">Style:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="TranformDropdown" :items="TranformItems" :popper="{ placement: 'bottom-start' }">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="py w-full cursor-pointer px-1 text-start text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
-      </div>
-    </div>
+
+    <DropdownComponent label="Style" :DropdownItems="styleItems" />
+
     <!-- Text Color  -->
-    <TextColorComponent />
+    <TextColorComponent label="Text Color" />
 
     <!-- width Section -->
-    <div class="grid w-full grid-cols-[20%_1fr] items-center gap-5 border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Width:</p>
-      <template>
-        <URange v-model="width" :min="0" :max="100" color="gray" size="sm" />
-      </template>
-    </div>
+    <RangeComponent label="Width" />
     <!-- Weight Section -->
-    <div class="grid w-full grid-cols-[20%_1fr] items-center gap-5 border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Weight:</p>
-      <template>
-        <URange v-model="Weight" :min="0" :max="100" color="gray" size="sm" />
-      </template>
-    </div>
+    <RangeComponent label="Weight" />
+
     <!-- Gap Section -->
-    <div class="grid w-full grid-cols-[20%_1fr] items-center gap-5 border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Gap:</p>
-      <template>
-        <URange v-model="gap" :min="0" :max="100" color="gray" size="sm" />
-      </template>
-    </div>
+    <RangeComponent label="Gap" />
+
     <!-- Alignment Section -->
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-3">
       <p class="text-xs text-gray-500">Alignment:</p>

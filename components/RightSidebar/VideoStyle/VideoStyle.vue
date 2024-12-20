@@ -13,7 +13,6 @@ const Items = [[{ label: '1:1' }, { label: '3:2' }, { label: '4:3' }, { label: '
     <!-- label  -->
     <h1 class="mt-1 text-sm font-bold text-gray-800">Video options</h1>
     <!-- Auto Play  -->
-    <!-- <input type="checkbox" id="autoPlay" /> -->
     <ToggleButtonComponent label="AutoPlay" />
     <!-- AutoPlay On Mobile -->
     <ToggleButtonComponent label="AutoPlay On Mobile" />
