@@ -5,6 +5,7 @@ import Divider from './Divider/Divider.vue';
 import HeadingStyle from './HeadingStyle/HeadingStyle.vue';
 
 import ImageStyle from './ImageStyle/ImageStyle.vue';
+import VideoStyle from './VideoStyle/VideoStyle.vue';
 
 definePageMeta({
   layout: 'main-layout',
@@ -13,10 +14,11 @@ definePageMeta({
 
 <template>
   <div class="h-auto min-h-screen w-full overflow-y-auto">
-    <HeadingStyle />
+    <!-- <HeadingStyle /> -->
     <!-- <Divider /> -->
     <!-- <ImageStyle /> -->
-    <ButtonStyle />
-    <!-- <AccordionStyle /> -->
+    <!-- <ButtonStyle /> -->
+    <VideoStyle />
+    <AccordionStyle />
   </div>
 </template>
