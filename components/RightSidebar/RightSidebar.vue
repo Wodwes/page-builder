@@ -19,6 +19,6 @@ definePageMeta({
     <!-- <ImageStyle /> -->
     <!-- <ButtonStyle /> -->
     <VideoStyle />
-    <AccordionStyle />
+    <!-- <AccordionStyle /> -->
   </div>
 </template>

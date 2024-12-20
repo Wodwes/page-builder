@@ -7,11 +7,11 @@ import PaddingMarginComponent from '~/components/Reusable/PaddingMarginComponent
 import TextColorComponent from '~/components/Reusable/TextColorComponent.vue';
 import LinkComponent from './LinkComponent.vue';
 import FontWeight from '~/components/Reusable/FontWeight.vue';
+import DropdownComponent from '~/components/Reusable/DropdownComponent.vue';
 
 defineShortcuts({ o: () => (open.value = !open.value) });
 
 const TranformItems = [[{ label: 'Uppercase' }, { label: 'Lowercase' }, { label: 'Capitalize' }, { label: 'Normal' }]];
-const TranformDropdown = ref(false);
 
 const TextStyleItems = [[{ label: 'Normal' }, { label: 'Italic' }]];
 const TextStyleDropdown = ref(false);
@@ -53,19 +53,8 @@ const alignments = [
     <!-- Font Weight  -->
     <FontWeight />
     <!-- text transform  -->
-    <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
-      <p class="text-xs text-gray-500">Text Transform:</p>
-      <div class="flex flex-row items-center justify-end rounded-md border">
-        <UDropdown v-model:open="TranformDropdown" :items="TranformItems" :popper="{ placement: 'bottom-start' }">
-          <UButton color="white" label="Default" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-xs text-gray-500" />
-          <template #item="{ item }">
-            <div class="cursor-pointer px-3 py-1 text-xs hover:bg-gray-100">
-              {{ item.label }}
-            </div>
-          </template>
-        </UDropdown>
-      </div>
-    </div>
+    <DropdownComponent label="Aspect ratio" :DropdownItems="TranformItems" />
+
     <!-- Text Style  -->
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-2">
       <p class="text-xs text-gray-500">Text Style:</p>
