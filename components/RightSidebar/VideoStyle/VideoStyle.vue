@@ -6,7 +6,7 @@ import PaddingMarginComponent from '~/components/Reusable/PaddingMarginComponent
 const Items = [[{ label: '1:1' }, { label: '3:2' }, { label: '4:3' }, { label: '16:9' }, { label: '21:9' }, { label: '9:16' }]];
 </script>
 <template>
-  <div class="overflow-hidden p-4">
+  <div class="h-auto overflow-hidden p-4">
     <h1 class="mb-2 text-sm font-bold text-gray-800">Video</h1>
     <!-- video Link  -->
     <LinkComponent label="Video link" />

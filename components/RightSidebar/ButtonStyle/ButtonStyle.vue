@@ -8,6 +8,7 @@ import LinkComponent from '../AccordionStyle/LinkComponent.vue';
 import FontWeight from '~/components/Reusable/FontWeight.vue';
 import ButtonText from '~/components/Reusable/ButtonText.vue';
 import DropdownComponent from '~/components/Reusable/DropdownComponent.vue';
+import UploadIcon from '~/components/Reusable/UploadIcon.vue';
 
 // Define an array of alignment options
 const alignments = [
@@ -89,13 +90,8 @@ const PaddingValidate = (event) => {
     <ButtonText />
     <!-- Button Link Section -->
     <LinkComponent label="Button Link" />
-    <!-- icon section  -->
-    <div class="flex w-full flex-col border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Icon:</p>
-      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="file" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="Link" />
-      </div>
-    </div>
+    <!-- upload icon  -->
+    <UploadIcon />
 
     <!-- Font Size  -->
     <FontSize />

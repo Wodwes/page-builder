@@ -10,28 +10,12 @@ import DividerComponent from '../components/DividerComponent.vue';
 import IconComponent from '../components/IconComponent.vue';
 import CarouselComponent from '../components/CarouselComponent .vue';
 import FormComponent from '../components/FormComponent.vue';
+import AlertComponent from '../components/AlertComponent.vue';
 
 const ComponentsDropdown = ref(false);
 
 // Store components and their respective states in an array
 const components = ref([
-  {
-    name: 'Accordion',
-    component: Accordion,
-    icon: 'tabler:section',
-    show: ref(false),
-  },
-  {
-    name: 'Card',
-    component: Card,
-    icon: 'material-symbols-light:id-card-outline-sharp',
-    show: ref(false),
-    props: {
-      title: 'Card Title',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu.',
-      buttonText: 'Learn More',
-    },
-  },
   {
     name: 'Button',
     component: ButtonComponent,
@@ -82,12 +66,39 @@ const components = ref([
     },
   },
   {
+    name: 'Alert',
+    component: AlertComponent,
+    icon: 'cuida:alert-outline',
+    show: ref(false),
+    props: {
+      message: 'alert',
+    },
+  },
+
+  {
     name: 'Form',
     component: FormComponent,
     icon: 'fluent:form-28-regular',
     show: ref(false),
     props: {
       FormTitle: 'Form',
+    },
+  },
+  {
+    name: 'Accordion',
+    component: Accordion,
+    icon: 'tabler:section',
+    show: ref(false),
+  },
+  {
+    name: 'Card',
+    component: Card,
+    icon: 'material-symbols-light:id-card-outline-sharp',
+    show: ref(false),
+    props: {
+      title: 'Card Title',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu.',
+      buttonText: 'Learn More',
     },
   },
 ]);

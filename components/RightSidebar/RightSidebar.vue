@@ -13,12 +13,12 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="h-auto min-h-screen w-full overflow-y-auto">
+  <div class="h-full min-h-screen w-full overflow-y-auto">
     <ButtonStyle />
-    <HeadingStyle />
-    <Divider />
-    <ImageStyle />
+    <!-- <HeadingStyle /> -->
+    <!-- <Divider /> -->
+    <!-- <ImageStyle /> -->
     <VideoStyle />
-    <AccordionStyle />
+    <!-- <AccordionStyle /> -->
   </div>
 </template>
