@@ -7,16 +7,12 @@ import HeadingStyle from './HeadingStyle/HeadingStyle.vue';
 
 import ImageStyle from './ImageStyle/ImageStyle.vue';
 import VideoStyle from './VideoStyle/VideoStyle.vue';
-
-definePageMeta({
-  layout: 'main-layout',
-});
 </script>
 
 <template>
   <div class="h-full min-h-screen w-full overflow-y-auto">
-    <AlertStyle />
-    <ButtonStyle />
+    <!-- <AlertStyle /> -->
+    <!-- <ButtonStyle /> -->
     <!-- <HeadingStyle /> -->
     <!-- <Divider /> -->
     <!-- <ImageStyle /> -->

@@ -1,14 +1,5 @@
 <script setup>
-definePageMeta({
-  layout: 'main-layout',
-});
-defineProps({
-  title: {
-    type: String,
-    default: 'Button',
-    Required: true,
-  },
-});
+const props = defineProps(['title']);
 </script>
 
 <template>

@@ -1,7 +1,4 @@
 <script setup>
-definePageMeta({
-  layout: 'main-layout',
-});
 defineProps({
   title: {
     type: String,

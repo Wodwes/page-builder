@@ -1,9 +1,4 @@
-<script setup lang="js">
-import { ref } from 'vue';
-definePageMeta({
-  layout: 'main-layout',
-});
-
+<script setup>
 // Define the accordion items
 const items = [
   {
