@@ -1,6 +1,7 @@
 <!-- image/ icons/video -->
 <script setup>
 import { Icon } from '@iconify/vue';
+import LinkComponent from '../AccordionStyle/LinkComponent.vue';
 const width = ref(0);
 const height = ref(0);
 const TranformItems = [[{ label: 'Thumbnails (150 x 150 )' }, { label: 'Medium(300 x 300)' }, { label: 'Medium Large(768 x 768)' }, { label: 'Large (1024 x 1024)' }, { label: '1536 x 1536 - 1536 x 1536' }, { label: '2048 x 2048 - 2048 x 2048' }, { label: 'Full' }, { label: 'Custom' }]];
@@ -60,12 +61,8 @@ const FontSizeValidate = (event) => {
       </div>
     </div>
     <!-- Link Section -->
-    <div class="flex w-full flex-row items-center gap-5 border-b py-2">
-      <p class="object-fill text-start text-xs text-gray-500">Link:</p>
-      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="text" class="w-full py-1 indent-3 text-xs focus:outline-none" placeholder="#" />
-      </div>
-    </div>
+    <LinkComponent />
+
     <!-- Alignment Section -->
     <div class="flex w-full flex-row items-center justify-between gap-6 border-b py-3">
       <p class="text-xs text-gray-500">Alignment:</p>

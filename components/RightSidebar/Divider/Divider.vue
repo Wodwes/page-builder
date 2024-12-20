@@ -1,6 +1,7 @@
 <!-- image/ icons/video -->
 <script setup>
 import { Icon } from '@iconify/vue';
+import TextColorComponent from '~/components/Reusable/TextColorComponent.vue';
 const width = ref(0);
 const Weight = ref(0);
 const gap = ref(0);
@@ -43,12 +44,8 @@ const FontSizeValidate = (event) => {
       </div>
     </div>
     <!-- Text Color  -->
-    <div class="flex w-full flex-row items-center justify-between border-b py-2">
-      <p class="text-start text-xs text-gray-500">Divider Color:</p>
-      <div class="flex flex-row items-center justify-end overflow-hidden rounded-md border text-xs">
-        <input type="color" class="w-6 bg-white p-1 indent-3 text-xs" />
-      </div>
-    </div>
+    <TextColorComponent />
+
     <!-- width Section -->
     <div class="grid w-full grid-cols-[20%_1fr] items-center gap-5 border-b py-2">
       <p class="object-fill text-start text-xs text-gray-500">Width:</p>
