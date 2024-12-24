@@ -1,6 +1,8 @@
+import { useStorage } from '@vueuse/core';
+
 export function useApp() {
   const state = useState('useApp', () => ({
-    fullScreenLoader: true,
+    showSidebar: useStorage('persisted-sidebar', true)
   }));
 
   return { state };
