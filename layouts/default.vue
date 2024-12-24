@@ -38,7 +38,7 @@ const isOpen = ref(false);
             <div class="flex items-end justify-end">
               <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1 border-gray-500" @click="isOpen = false" />
             </div>
-            <!-- <SidebarMain /> -->
+            <SidebarMain />
           </template>
         </UCard>
       </USlideover>
@@ -69,7 +69,7 @@ const isOpen = ref(false);
           <slot />
         </div>
         <!-- Right Sidebar -->
-        <div class="hidden h-auto min-h-screen w-80 border-l border-gray-500 md:max-w-80 lg:flex">
+        <div class="border-gray-00 hidden h-auto min-h-screen w-80 border-l md:max-w-80 lg:flex">
           <!-- <RightSidebar /> -->
         </div>
       </div>
