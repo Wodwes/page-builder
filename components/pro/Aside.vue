@@ -16,7 +16,7 @@ const value = ref('');
       <UButton icon="heroicons:rocket-launch" size="md" class="text-custom-gray hover:text-primary w-full" variant="ghost">Releases</UButton>
     </div>
     <div class="w-full border-b border-dashed border-gray-400 pb-4">
-      <UTextarea color="neutral" variant="outline" :rows="12" class="w-full" />
+      <UTextarea v-model="value" color="neutral" variant="outline" :rows="12" class="w-full" />
     </div>
     <div class="flex flex-row items-center justify-center gap-2 py-2">
       <Icon icon="mdi-light:heart" width="24" height="24" />
