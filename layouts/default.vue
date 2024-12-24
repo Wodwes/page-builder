@@ -1,78 +1,29 @@
 <script setup>
-import { ref } from 'vue';
-import { Icon } from '@iconify/vue';
-import SidebarMain from '~/components/SidebarMain.vue';
-useSeoMeta({
-  title: 'Page Builder | Wodwes',
-});
+useSeoMeta({ title: 'Page Builder | Wodwes' });
 
-// State for toggling sidebar visibility
-const isSidebarVisible = ref(true);
-
-// Toggle sidebar function
-const toggleSidebar = () => {
-  isSidebarVisible.value = !isSidebarVisible.value;
-};
-const isOpen = ref(false);
+const { state } = useApp();
 </script>
 
 <template>
-  <div class="flex h-auto min-h-screen">
-    <!-- Sidebar -->
-    <div v-if="isSidebarVisible" class="hidden w-64 flex-col border-r border-gray-500 md:flex">
-      <div class="flex h-16 items-center justify-center border-b border-gray-500">
-        <span class="text-center leading-4">
-          <span class="text-primary font-bold tracking-widest uppercase">Wodwes</span>
-          <br />
-          <span class="text-xs">Page Builder</span>
-        </span>
-      </div>
-      <SidebarMain />
+  <nav class="relative flex h-[64px] w-full items-center justify-between self-center border-b pr-8 pl-4">
+    <div class="flex items-center gap-4">
+      <UButton @click="state.showSidebar = !state.showSidebar" icon="i-quill:hamburger-sidebar" size="md" color="primary" variant="soft" class="hiddenmd:block cursor-pointer p-1" :ui="{ leadingIcon: 'size-6' }" />
+      <div class="text-lg text-gray-700">Page builder</div>
     </div>
 
-    <!-- Mobile Sidebar (Slideover from the left) -->
-    <div class="block md:hidden">
-      <USlideover v-model="isOpen" prevent-close>
-        <UCard class="relative left-0 flex flex-1 flex-col" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100  ' }">
-          <template #header>
-            <div class="flex items-end justify-end">
-              <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1 border-gray-500" @click="isOpen = false" />
-            </div>
-            <SidebarMain />
-          </template>
-        </UCard>
-      </USlideover>
+    <div class="flex items-center gap-4">
+      <UAvatar icon="i-lucide-image" size="xl" />
     </div>
-
-    <!-- Main Layout -->
-    <div class="flex flex-1 flex-col overflow-y-auto">
-      <!-- Top Navigation -->
-      <div class="sticky top-0 z-10 flex min-h-16 items-center justify-between border-b border-gray-500 max-md:shadow-sm dark:bg-[#0F172A]">
-        <div class="flex items-center px-4">
-          <button @click="toggleSidebar" class="z-10 hidden text-gray-500 focus:text-gray-700 focus:outline-none md:block">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-          <div class="block md:hidden">
-            <UButton icon="lucide:align-justify" size="sm" class="bg-white text-gray-500" variant="outline" :trailing="false" @click="isOpen = true" />
-          </div>
-        </div>
-        <div class="flex items-center pr-4">
-          <UAvatar icon="i-heroicons-photo" size="sm" />
-        </div>
+  </nav>
+  <main class="flex">
+    <ClientOnly>
+      <div class="relative z-10 h-[calc(100vh-66px)] shrink-0 border-r bg-white pr-0.5 duration-200" :class="state.showSidebar ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
+        <Sidebar />
       </div>
-
-      <!-- Page Content -->
-      <div class="flex h-auto">
-        <div class="w-full p-4">
-          <slot />
-        </div>
-        <!-- Right Sidebar -->
-        <div class="border-gray-00 hidden h-auto min-h-screen w-80 border-l md:max-w-80 lg:flex">
-          <!-- <RightSidebar /> -->
-        </div>
-      </div>
+    </ClientOnly>
+    <div class="h-[calc(100vh-71px)] w-full overflow-auto">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores dolorem eius sint, temporibus earum quasi? Voluptate hic impedit porro qui odio, amet enim odit mollitia praesentium ratione! Dolor, hic debitis.
+      <slot class="p-4" />
     </div>
-  </div>
+  </main>
 </template>
