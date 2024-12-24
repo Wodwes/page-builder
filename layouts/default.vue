@@ -22,7 +22,6 @@ const { state } = useApp();
       </div>
     </ClientOnly>
     <div class="h-[calc(100vh-71px)] w-full overflow-auto">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores dolorem eius sint, temporibus earum quasi? Voluptate hic impedit porro qui odio, amet enim odit mollitia praesentium ratione! Dolor, hic debitis.
       <slot class="p-4" />
     </div>
   </main>

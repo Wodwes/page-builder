@@ -1,3 +1,5 @@
+@layer theme, base, components, utilities;
+
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
@@ -11,6 +13,12 @@
   /* colors */
   --color-primary: #00c16a;
   --color-custom-gray: #6b7280;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
 }
 
 @layer base {

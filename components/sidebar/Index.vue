@@ -1,17 +1,10 @@
 <script setup>
-import { ref } from 'vue';
-
-// Tracks the currently open dropdown
-const activeDropdown = ref(true);
-
-const toggleDropdown = (section) => {
-  activeDropdown.value = activeDropdown.value === section ? null : section;
-};
+const { addComponent } = useBuilderPage();
 
 const items = [
   {
     label: 'Components',
-    icon: 'i-material-symbols:library-books-outline',
+    icon: 'i-fluent-mdl2:web-components',
     slot: 'components',
   },
   {
@@ -28,16 +21,22 @@ const items = [
 </script>
 
 <template>
-  <UAccordion :items="items">
-    <template #colors="{ item }">
-      <p class="pb-3.5 text-sm text-[var(--ui-primary)]">
-        {{ item.content }}
-      </p>
+  <UAccordion :items="items" :ui="{ header: 'px-4 hover:bg-primary/10', content: 'px-4 py-2', item: 'last:border-b' }">
+    <template #components="{ item }">
+      <!-- headings -->
+      <div class="grid grid-cols-4 gap-2">
+        <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" v-for="(heading, index) in [1, 2, 3, 4, 5, 6]" :key="index" @click="addComponent('heading', { level: heading })">
+          <Icon :name="'i-gravity-ui:heading-' + heading" class="text-2xl" />
+        </div>
+      </div>
+    </template>
+
+    <template #pages="{ item }">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iure velit magni sequi enim corrupti atque, nihil minus harum perspiciatis! Officiis tenetur reiciendis rerum quam, quos amet explicabo enim nihil!</div>
+    </template>
+
+    <template #settings="{ item }">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iure velit magni sequi enim corrupti atque, nihil minus harum perspiciatis! Officiis tenetur reiciendis rerum quam, quos amet explicabo enim nihil!</div>
     </template>
   </UAccordion>
-
-  <!-- <div class="h-auto space-y-2 border-b border-gray-500 px-4 py-2"> -->
-  <!-- Components Section -->
-
-  <!-- </div> -->
 </template>
