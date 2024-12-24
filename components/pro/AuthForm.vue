@@ -7,7 +7,7 @@ const password = ref('');
 <template>
   <div class="flex min-w-xl flex-col items-center justify-center rounded-lg border p-6">
     <!-- Header section with lock icon and welcome text -->
-    <div class="flex flex-col items-center justify-center gap-2">
+    <div class="flex w-full max-w-sm flex-col items-center justify-center gap-2">
       <Icon icon="heroicons:lock-closed" width="30" height="30" class="mt- mb-2 text-black" />
       <p class="text-2xl leading-8 font-bold text-black">Welcome back!</p>
       <div class="flex flex-row items-center justify-center">
@@ -32,15 +32,22 @@ const password = ref('');
           </UInput>
         </UFormField>
       </div>
-      <div class="flex w-full flex-col justify-start gap-2 py-3">
-        <UCheckbox label="Remember me" />
-        <UAlert
-          title="Error signing in"
-          icon="information-circle-20-solid"
-          :ui="{
-            icon: 'size-11',
-          }"
-        />
+      <div class="flex w-full flex-col justify-start gap-4 py-1">
+        <UCheckbox label="Remember me" class="my-3" />
+        <UAlert title="Error signing in" color="error" icon="heroicons:information-circle-20-solid" :ui="{ icon: 'size-6' }" />
+        <UButton color="primary" class="mx-auto w-full justify-center">Continue</UButton>
+
+        <div class="my-4 flex items-center">
+          <div class="flex-grow border-t border-gray-300"></div>
+          <span class="mx-2 text-gray-600">or</span>
+          <div class="flex-grow border-t border-gray-300"></div>
+        </div>
+        <UButton icon="fe:github" size="md" color="ghost" variant="solid" class="justify-center rounded-md border"> Continue with GitHub</UButton>
+        <div class="flex flex-row items-center justify-center">
+          <p class="text-custom-gray text-base leading-4">By signing in, you agree to our</p>
+          <p class="text-primary text-base leading-4">&nbsp;Terms of Service</p>
+          .
+        </div>
       </div>
     </div>
   </div>
