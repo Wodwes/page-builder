@@ -1,2 +1,10 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-primary: #00c16a;
+}
