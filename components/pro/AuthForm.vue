@@ -5,7 +5,7 @@ const password = ref('');
 </script>
 
 <template>
-  <div class="flex min-w-xl flex-col items-center justify-center rounded-lg border p-6">
+  <div class="flex min-w-xl flex-col items-center justify-center">
     <!-- Header section with lock icon and welcome text -->
     <div class="flex w-full max-w-sm flex-col items-center justify-center gap-2">
       <Icon icon="heroicons:lock-closed" width="30" height="30" class="mt- mb-2 text-black" />

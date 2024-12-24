@@ -14,7 +14,7 @@ const value = ref('');
     </div>
 
     <!-- Button List -->
-    <div class="my-4 flex flex-col items-center gap-2">
+    <div class="my-4 flex min-w-xl flex-col items-center gap-2">
       <UButton icon="ion:book-outline" size="md" class="text-custom-gray hover:text-primary w-full" variant="ghost" aria-label="Documentation"> Documentation </UButton>
       <UButton icon="ic:round-bolt" size="md" class="text-custom-gray hover:text-primary w-full" variant="ghost" aria-label="Playground"> Playground </UButton>
       <UButton icon="solar:map-broken" size="md" class="text-custom-gray hover:text-primary w-full" variant="ghost" aria-label="Roadmap"> Roadmap </UButton>

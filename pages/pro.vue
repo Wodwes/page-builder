@@ -1,10 +1,14 @@
 <script setup>
 import Aside from '~/components/pro/Aside.vue';
 import AuthForm from '~/components/pro/AuthForm.vue';
+import BlogPost from '~/components/pro/BlogPost.vue';
 </script>
 <template>
-  <div class="flex h-auto w-full max-w-4xl items-center justify-center">
-    <!-- <Aside /> -->
-    <AuthForm />
+  <div class="mx-auto flex h-auto w-full max-w-4xl items-center justify-center">
+    <div class="rounded-md border p-4">
+      <!-- <Aside /> -->
+      <!-- <AuthForm /> -->
+      <BlogPost />
+    </div>
   </div>
 </template>
