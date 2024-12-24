@@ -1,25 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
-@layer base {
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
+@theme {
+  --font-inter: 'Inter', sans-serif;
 
-  ::-webkit-scrollbar-track {
-    @apply bg-gray-200 dark:bg-gray-800;
-  }
+  --breakpoint-3xl: 1920px;
 
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 dark:bg-gray-600; /* Use gray colors for the scrollbar thumb */
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Darker gray on hover */
-  }
-
-  * {
-    @apply font-Inter;
-  }
+  --color-primary: #00c16a;
+  --color-custom-gray: #6b7280;
 }

@@ -1,5 +1,10 @@
 <script setup>
-useSeoMeta({ title: 'Page Builder | Wodwes' });
+import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
+import SidebarMain from '~/components/SidebarMain.vue';
+useSeoMeta({
+  title: 'Page Builder | Wodwes',
+});
 
 // State for toggling sidebar visibility
 const isSidebarVisible = ref(true);
@@ -14,22 +19,35 @@ const isOpen = ref(false);
 <template>
   <div class="flex h-auto min-h-screen">
     <!-- Sidebar -->
-    <div v-if="isSidebarVisible" class="w-64 flex-col border-r md:flex dark:border-gray-800">
-      <div class="flex h-16 items-center justify-center border-b dark:border-gray-800">
+    <div v-if="isSidebarVisible" class="hidden w-64 flex-col border-r border-gray-500 md:flex">
+      <div class="flex h-16 items-center justify-center border-b border-gray-500">
         <span class="text-center leading-4">
-          <span class="text-primary font-bold uppercase tracking-widest">Wodwes</span>
+          <span class="text-primary font-bold tracking-widest uppercase">Wodwes</span>
           <br />
           <span class="text-xs">Page Builder</span>
         </span>
       </div>
-      <!-- sidebar -->
       <SidebarMain />
+    </div>
+
+    <!-- Mobile Sidebar (Slideover from the left) -->
+    <div class="block md:hidden">
+      <USlideover v-model="isOpen" prevent-close>
+        <UCard class="relative left-0 flex flex-1 flex-col" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100  ' }">
+          <template #header>
+            <div class="flex items-end justify-end">
+              <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1 border-gray-500" @click="isOpen = false" />
+            </div>
+            <SidebarMain />
+          </template>
+        </UCard>
+      </USlideover>
     </div>
 
     <!-- Main Layout -->
     <div class="flex flex-1 flex-col overflow-y-auto">
       <!-- Top Navigation -->
-      <div class="max-md:shadow-sm sticky top-0 z-10 flex min-h-16 items-center justify-between border-b duration-200 dark:border-gray-800 dark:bg-[#0F172A]">
+      <div class="sticky top-0 z-10 flex min-h-16 items-center justify-between border-b border-gray-500 max-md:shadow-sm dark:bg-[#0F172A]">
         <div class="flex items-center px-4">
           <button @click="toggleSidebar" class="z-10 hidden text-gray-500 focus:text-gray-700 focus:outline-none md:block">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,8 +64,14 @@ const isOpen = ref(false);
       </div>
 
       <!-- Page Content -->
-      <div class="w-full p-4">
-        <slot />
+      <div class="flex h-auto">
+        <div class="w-full p-4">
+          <slot />
+        </div>
+        <!-- Right Sidebar -->
+        <div class="border-gray-00 hidden h-auto min-h-screen w-80 border-l md:max-w-80 lg:flex">
+          <!-- <RightSidebar /> -->
+        </div>
       </div>
     </div>
   </div>

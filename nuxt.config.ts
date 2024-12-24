@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
+  
   app: {
     // pageTransition: { name: 'page', mode: 'out-in' },
     rootId: '__Wodwes-page-builder',
@@ -20,10 +21,6 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui', '@vueuse/nuxt'],
-  css: ['~/assets/css/main.css'],
-  
-  colorMode: {
-    preference: "light",
-  },
-})
+  modules: ["@nuxt/ui",'@vueuse/nuxt'],
+  css: ["~/assets/css/main.css"],
+});
