@@ -4,5 +4,6 @@ import Aside from '~/components/pro/Aside.vue';
 <template>
   <div class="flex h-auto w-full items-center justify-center">
     <Aside />
+    <AuthForm
   </div>
 </template>
