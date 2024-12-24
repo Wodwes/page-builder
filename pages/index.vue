@@ -1,5 +1,5 @@
 <template>
-  <div class="text-primary">
+  <!-- <div class="text-primary">
     <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis eligendi alias mollitia facere assumenda. Sint, saepe? Aut animi sed, earum sapiente pariatur deserunt vitae, perspiciatis enim architecto tempore nemo labore!</h1>
     <UButton>Test button</UButton>
     <UAlert
@@ -10,5 +10,5 @@
         icon: 'size-11',
       }"
     />
-  </div>
+  </div> -->
 </template>
