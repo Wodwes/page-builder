@@ -19,7 +19,7 @@ const truncatedContent = ref(limitWords(content.value, 20));
 </script>
 
 <template>
-  <UContainer class="-mx-5">
+  <UContainer class="md:-mx-5">
     <div class="items-between grid grid-cols-1 justify-center md:grid-cols-2 md:gap-4">
       <!-- Image section -->
       <div>
