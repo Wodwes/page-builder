@@ -1,10 +1,11 @@
 <script setup>
 import Aside from '~/components/pro/Aside.vue';
 import AuthForm from '~/components/pro/AuthForm.vue';
-import Banner1 from '~/components/pro/Banner1.vue';
-import Banner2 from '~/components/pro/Banner2.vue';
-import Banner3 from '~/components/pro/Banner3.vue';
+import Banner1 from '~/components/pro/banners/Banner1.vue';
+import Banner2 from '~/components/pro/banners/Banner2.vue';
+import Banner3 from '~/components/pro/banners/Banner3.vue';
 import BlogPost from '~/components/pro/BlogPost.vue';
+import SectionsComponent from '../components/pro/section/SectionsComponent.vue';
 </script>
 <template>
   <div class="mx-auto h-auto w-full max-w-4xl">
@@ -15,6 +16,7 @@ import BlogPost from '~/components/pro/BlogPost.vue';
     <!-- <Banner1 /> -->
     <!-- <Banner2 /> -->
     <Banner3 />
+    <!-- <SectionsComponent /> -->
     <!-- </div> -->
   </div>
 </template>
