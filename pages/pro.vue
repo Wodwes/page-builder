@@ -9,6 +9,7 @@ import SectionsComponent from '../components/pro/section/SectionsComponent.vue';
 import LightBoxGallery from '~/components/pro/gallery/LightBoxGallery.vue';
 import BasicGallery from '~/components/pro/gallery/BasicGallery.vue';
 import HeadingDesigns1 from '~/components/pro/HeadingDesigns/HeadingDesigns1.vue';
+import HeadingDesigns2 from '~/components/pro/HeadingDesigns/HeadingDesigns2.vue';
 </script>
 <template>
   <div class="mx-auto h-auto w-full max-w-4xl">
@@ -23,6 +24,7 @@ import HeadingDesigns1 from '~/components/pro/HeadingDesigns/HeadingDesigns1.vue
     <!-- <BasicGallery /> -->
     <!-- <LightBoxGallery /> -->
     <HeadingDesigns1 />
+    <!-- <HeadingDesigns2 /> -->
 
     <!-- </div> -->
   </div>
