@@ -21,6 +21,9 @@ const { state } = useApp();
     <div class="h-[calc(100vh-71px)] w-full overflow-auto">
       <slot />
     </div>
-    <div class="relative z-10 h-[calc(100vh-66px)] border-l bg-white p-2 duration-200" :class="state.showCustomizer ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'" id="teleports"></div>
+    <div class="relative z-10 h-[calc(100vh-66px)] border-l bg-white p-2 duration-200" :class="state.showCustomizer ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
+      <!-- customizer tab -->
+      <ShowPageCustomizations />
+    </div>
   </main>
 </template>

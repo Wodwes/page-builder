@@ -1,18 +1,21 @@
 <script setup>
-const page = ref({
-  heading: {
-    level: 1,
-    size: '',
-    style: '',
-    text: 'Hello world',
-  },
-});
+const { state, page } = useBuilderPage();
 </script>
 <template>
   <div class="p-4">
-    <TextHeading :data="page.heading" />
+    <!-- show components based on the builder page array -->
+    <template v-for="(component, index) in page" :key="index">
+      <ShowPageComponent
+        :component="component.component"
+        :data="component"
+        @click="
+          state.activeComponent = component.component;
+          state.activeComponentIndex = index;
+        "
+      />
+    </template>
 
     <!-- raw data -->
-    <!-- <div>{{ page }}</div> -->
+    <!-- <pre>{{ page }}</pre> -->
   </div>
 </template>

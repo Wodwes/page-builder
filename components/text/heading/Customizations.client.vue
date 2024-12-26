@@ -1,13 +1,11 @@
 <template>
-  <Teleport to="#teleports">
-    <div class="mb-2 grid grid-cols-2 gap-2">
-      <USelect v-model="data.level" :items="items" :ui="ui" placeholder="Heading" class="w-full" />
-      <USelect v-model="data.size" :items="sizes" :ui="ui" placeholder="Size" class="w-full" />
-      <USelect v-model="data.style" :items="styles" :ui="ui" placeholder="Style" class="w-full" />
-    </div>
+  <div class="mb-2 grid grid-cols-2 gap-2">
+    <USelect v-model="data.level" :items="items" :ui="ui" placeholder="Heading" class="w-full" />
+    <USelect v-model="data.size" :items="sizes" :ui="ui" placeholder="Size" class="w-full" />
+    <USelect v-model="data.style" :items="styles" :ui="ui" placeholder="Style" class="w-full" />
+  </div>
 
-    <UInput v-model="data.text" class="w-full" placeholder="Text" />
-  </Teleport>
+  <UInput v-model="data.text" class="w-full" placeholder="Text" />
 </template>
 
 <script setup>
