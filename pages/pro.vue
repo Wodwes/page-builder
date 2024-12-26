@@ -8,6 +8,7 @@ import BlogPost from '~/components/pro/BlogPost.vue';
 import SectionsComponent from '../components/pro/section/SectionsComponent.vue';
 import LightBoxGallery from '~/components/pro/gallery/LightBoxGallery.vue';
 import BasicGallery from '~/components/pro/gallery/BasicGallery.vue';
+import HeadingDesigns1 from '~/components/pro/HeadingDesigns/HeadingDesigns1.vue';
 </script>
 <template>
   <div class="mx-auto h-auto w-full max-w-4xl">
@@ -20,7 +21,8 @@ import BasicGallery from '~/components/pro/gallery/BasicGallery.vue';
     <!-- <Banner3 /> -->
     <!-- <SectionsComponent /> -->
     <!-- <BasicGallery /> -->
-    <LightBoxGallery />
+    <!-- <LightBoxGallery /> -->
+    <HeadingDesigns1 />
 
     <!-- </div> -->
   </div>
