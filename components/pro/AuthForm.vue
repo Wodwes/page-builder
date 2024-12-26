@@ -29,7 +29,7 @@ const password = ref('');
           <UInput v-model="password" placeholder="Password" :type="show ? 'text' : 'password'" :ui="{ trailing: 'pe-1' }" class="w-full">
             <!-- Trailing slot for the password visibility toggle button -->
             <template #trailing>
-              <UButton color="neutral" variant="link" size="sm" :icon="show ? 'i-lucide-eye-off' : 'i-lucide-eye'" aria-label="show ? 'Hide password' : 'Show password'" :aria-pressed="show" aria-controls="password" @click="show = !show" />
+              <UButton color="neutral" variant="link" size="sm" :icon="show ? 'ion:eye-off-outline' : 'mdi:eye-outline'" aria-label="show ? 'Hide password' : 'Show password'" :aria-pressed="show" aria-controls="password" @click="show = !show" />
             </template>
           </UInput>
         </UFormField>

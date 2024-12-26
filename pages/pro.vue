@@ -6,9 +6,9 @@ import BlogPost from '~/components/pro/BlogPost.vue';
 <template>
   <div class="mx-auto h-auto w-full max-w-4xl items-center justify-center md:flex">
     <div class="mx-2 rounded-md border p-4">
-      <!-- <Aside /> -->
+      <Aside />
       <AuthForm />
-      <!-- <BlogPost /> -->
+      <BlogPost />
     </div>
   </div>
 </template>
