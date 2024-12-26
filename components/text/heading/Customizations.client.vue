@@ -1,8 +1,8 @@
 <script setup>
-defineProps({ level: { type: Number, required: true }, text: { type: String, required: true } });
+defineProps(['data']);
 </script>
 <template>
   <Teleport to="#teleports">
-    <UInput placeholder="Search..." />
+    <UInput v-model="data.text" class="w-full" placeholder="Text" />
   </Teleport>
 </template>

@@ -1,8 +1,8 @@
 <script setup>
-defineProps({ level: { type: Number, required: true }, text: { type: String, required: true }, class: { type: String, required: false } });
+defineProps(['data']);
 </script>
 <template>
-  <TextHeadingComponent :level="level" :text="text" />
+  <TextHeadingComponent :data="data" />
   <!-- customizer fields -->
-  <TextHeadingCustomizations :level="level" :text="text" />
+  <TextHeadingCustomizations :data="data" />
 </template>

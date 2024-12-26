@@ -1,6 +1,6 @@
 <script setup>
-defineProps({ level: { type: Number, required: true }, text: { type: String, required: true }, class: { type: String, required: false } });
+defineProps(['data']);
 </script>
 <template>
-  <component :class="class" :is="'h' + level">{{ text }}</component>
+  <component :is="'h' + data.level">{{ data.text }}</component>
 </template>

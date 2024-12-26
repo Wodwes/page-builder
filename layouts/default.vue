@@ -15,12 +15,12 @@ const { state } = useApp();
     </div>
   </nav>
   <main class="grid grid-cols-[auto_1fr_auto]">
-    <div class="relative z-10 h-[calc(100vh-66px)] border-r bg-white pr-0.5 duration-200" :class="state.showSidebar ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
+    <div class="relative z-10 h-[calc(100vh-66px)] border-r bg-white duration-200" :class="state.showSidebar ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
       <Sidebar />
     </div>
     <div class="h-[calc(100vh-71px)] w-full overflow-auto">
       <slot />
     </div>
-    <div class="relative z-10 h-[calc(100vh-66px)] border-l bg-white pr-0.5 duration-200" :class="state.showCustomizer ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'" id="teleports"></div>
+    <div class="relative z-10 h-[calc(100vh-66px)] border-l bg-white p-2 duration-200" :class="state.showCustomizer ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'" id="teleports"></div>
   </main>
 </template>
