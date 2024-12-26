@@ -1,6 +1,7 @@
 export function useApp() {
   const state = useState('AppState', () => ({
-    showSidebar: true
+    showSidebar: true,
+    showCustomizer: true
   }));
 
   return { state };

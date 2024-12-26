@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
-  <div>
+  <div class="p-4">
     <div>conponents</div>
-    <Heading :level="6" text="Hello world" class="text-2xl" />
+    <TextHeading :level="6" text="Hello world" class="text-2xl" />
   </div>
 </template>
