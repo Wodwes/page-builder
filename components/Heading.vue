@@ -1,6 +1,6 @@
 <script setup>
-defineProps(['level']);
+defineProps({ level: { type: Number, required: true }, text: { type: String, required: true } });
 </script>
 <template>
-  <h1>Test heading</h1>
+  <component :is="'h' + level">{{ text }}</component>
 </template>
