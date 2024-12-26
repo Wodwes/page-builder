@@ -15,8 +15,8 @@ import SectionsComponent from '../components/pro/section/SectionsComponent.vue';
     <!-- <BlogPost /> -->
     <!-- <Banner1 /> -->
     <!-- <Banner2 /> -->
-    <Banner3 />
-    <!-- <SectionsComponent /> -->
+    <!-- <Banner3 /> -->
+    <SectionsComponent />
     <!-- </div> -->
   </div>
 </template>
