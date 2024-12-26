@@ -3,6 +3,7 @@ const page = ref({
   heading: {
     level: 1,
     size: '',
+    style: '',
     text: 'Hello world',
   },
 });

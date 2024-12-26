@@ -1,9 +1,11 @@
 <template>
   <Teleport to="#teleports">
-    <div class="flex gap-2">
-      <USelect v-model="data.level" :items="items" :ui="ui" placeholder="Heading" class="mb-2 w-full" />
-      <USelect v-model="data.size" :items="sizes" :ui="ui" placeholder="Size" class="mb-2 w-full" />
+    <div class="mb-2 grid grid-cols-2 gap-2">
+      <USelect v-model="data.level" :items="items" :ui="ui" placeholder="Heading" class="w-full" />
+      <USelect v-model="data.size" :items="sizes" :ui="ui" placeholder="Size" class="w-full" />
+      <USelect v-model="data.style" :items="styles" :ui="ui" placeholder="Style" class="w-full" />
     </div>
+
     <UInput v-model="data.text" class="w-full" placeholder="Text" />
   </Teleport>
 </template>
@@ -33,5 +35,12 @@ const sizes = [
   { label: '5XL', value: 'text-5xl' },
   { label: '6XL', value: 'text-6xl' },
   { label: '7XL', value: 'text-7xl' },
+];
+
+const styles = [
+  { label: 'Normal', value: 'normal' },
+  { label: 'Italic', value: 'italic' },
+  { label: 'Bold', value: 'bold' },
+  { label: 'Underline', value: 'underline' },
 ];
 </script>
