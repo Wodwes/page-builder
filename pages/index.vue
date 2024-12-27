@@ -9,6 +9,6 @@ const { state, page } = useBuilderPage();
     </template>
 
     <!-- raw data -->
-    <pre>{{ state }}</pre>
+    <!-- <pre>{{ state }}</pre> -->
   </div>
 </template>

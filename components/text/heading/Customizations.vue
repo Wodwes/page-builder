@@ -1,8 +1,17 @@
 <template>
   <div class="mb-2 grid grid-cols-2 gap-2">
-    <USelect v-model="data.level" :items="items" :ui="ui" placeholder="Heading" class="w-full" />
-    <USelect v-model="data.size" :items="sizes" :ui="ui" placeholder="Size" class="w-full" />
-    <USelect v-model="data.style" :items="styles" :ui="ui" placeholder="Style" class="w-full" />
+    <div>
+      <h3 class="mb-1 text-sm">Heading</h3>
+      <USelect v-model="data.level" :items="headings" placeholder="Heading" class="w-full" />
+    </div>
+
+    <div>
+      <h3 class="mb-1 text-sm">Size</h3>
+      <USelect v-model="data.size" :items="textSizes" placeholder="Size" class="w-full" />
+    </div>
+
+    <USelect v-model="data.style" :items="textStyles" placeholder="Style" class="w-full" />
+    <USelect v-model="data.weight" :items="textWeights" placeholder="Weight" class="w-full" />
   </div>
 
   <UInput v-model="data.text" class="w-full" placeholder="Text" />
@@ -11,34 +20,5 @@
 <script setup>
 defineProps(['data']);
 
-const ui = { trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' };
-
-const items = [
-  { label: 'H1', value: 1 },
-  { label: 'H2', value: 2 },
-  { label: 'H3', value: 3 },
-  { label: 'H4', value: 4 },
-  { label: 'H5', value: 5 },
-  { label: 'H6', value: 6 },
-];
-
-const sizes = [
-  { label: 'Small', value: 'text-sm' },
-  { label: 'Medium', value: 'text-base' },
-  { label: 'Large', value: 'text-lg' },
-  { label: 'Extra Large', value: 'text-xl' },
-  { label: '2XL', value: 'text-2xl' },
-  { label: '3XL', value: 'text-3xl' },
-  { label: '4XL', value: 'text-4xl' },
-  { label: '5XL', value: 'text-5xl' },
-  { label: '6XL', value: 'text-6xl' },
-  { label: '7XL', value: 'text-7xl' },
-];
-
-const styles = [
-  { label: 'Normal', value: 'normal' },
-  { label: 'Italic', value: 'italic' },
-  { label: 'Bold', value: 'bold' },
-  { label: 'Underline', value: 'underline' },
-];
+const { textSizes, textStyles, headings, textWeights } = staticData();
 </script>

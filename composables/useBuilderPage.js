@@ -8,16 +8,14 @@ export function useBuilderPage() {
     }));
 
     // page data
-    const page = useState('BuilderPageData', () => ([
-        { component: "paragraph", size: "", style: "", text: "Enter paragraph text" }
-    ]));
+    const page = useState('BuilderPageData', () => ([]));
 
     // add component to page
     const addComponent = (component) => {
         let CurrComponent = null
 
         if (component === 'heading') {
-            CurrComponent = { component: 'heading', level: '1', size: '', style: '', text: 'Enter heading text' }
+            CurrComponent = { component: 'heading', level: 1, size: 'text-2xl', weight: 'font-semibold', style: 'font-style-none', text: 'Enter heading text' }
         } else if (component === 'paragraph') {
             CurrComponent = { component: 'paragraph', size: '', style: '', text: 'Enter paragraph text' }
         }
