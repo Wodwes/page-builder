@@ -7,5 +7,6 @@ const { state, page } = useBuilderPage();
 
   <div class="mt-2 border-t pt-3">
     <TextHeadingCustomizations v-if="state.activeComponent === 'heading'" :data="page[state.activeComponentIndex]" />
+    <TextParagraphCustomizations v-if="state.activeComponent === 'paragraph'" :data="page[state.activeComponentIndex]" />
   </div>
 </template>

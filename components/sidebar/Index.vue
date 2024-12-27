@@ -29,10 +29,14 @@ const removeComponent = (index) => {
 <template>
   <UAccordion :items="items" :ui="{ header: 'px-4 hover:bg-primary/10', content: 'px-4 py-2', item: 'last:border-b' }">
     <template #components="{ item }">
-      <!-- headings -->
       <div class="grid grid-cols-4 gap-2">
+        <!-- heading -->
         <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" @click="addComponent('heading')">
           <Icon name="i-gravity-ui:heading" class="text-2xl" />
+        </div>
+        <!-- paragraph -->
+        <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" @click="addComponent('paragraph')">
+          <Icon name="i-material-symbols:format-paragraph-rounded" class="text-2xl" />
         </div>
       </div>
       <hr class="mt-4 mb-2" />

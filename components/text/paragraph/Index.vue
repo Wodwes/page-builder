@@ -1,8 +1,6 @@
 <script setup>
-defineProps({ text: { type: String, required: true }, class: { type: String, required: false } });
+defineProps(['data']);
 </script>
 <template>
-  <TextHeadingComponent :text="text" />
-  <!-- customizer fields -->
-  <TextHeadingCustomizations :text="text" />
+  <p :class="[data.size, data.style]">{{ data.text }}</p>
 </template>
