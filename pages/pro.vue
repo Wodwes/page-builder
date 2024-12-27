@@ -13,6 +13,7 @@ import HeadingDesigns2 from '~/components/pro/HeadingDesigns/HeadingDesigns2.vue
 import DividerComponent from '~/components/pro/DividerComponent.vue';
 import FormComponent from '~/components/pro/forms/FormComponent.vue';
 import IconComponent from '~/components/pro/IconComponent.vue';
+import Card from '~/components/pro/Card.vue';
 </script>
 <template>
   <div class="mx-auto h-auto w-full">
@@ -30,7 +31,8 @@ import IconComponent from '~/components/pro/IconComponent.vue';
     <!-- <HeadingDesigns2 /> -->
     <!-- <DividerComponent /> -->
     <!-- <FormComponent /> -->
-    <IconComponent />
+    <!-- <IconComponent /> -->
+    <Card customClasses="md:max-w-xl" />
 
     <!-- </div> -->
   </div>
