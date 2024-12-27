@@ -14,6 +14,7 @@ import DividerComponent from '~/components/pro/DividerComponent.vue';
 import FormComponent from '~/components/pro/forms/FormComponent.vue';
 import IconComponent from '~/components/pro/IconComponent.vue';
 import Card from '~/components/pro/Card.vue';
+import RangeComponent from '~/components/pro/RangeComponent.vue';
 </script>
 <template>
   <div class="mx-auto h-auto w-full">
@@ -32,7 +33,8 @@ import Card from '~/components/pro/Card.vue';
     <!-- <DividerComponent /> -->
     <!-- <FormComponent /> -->
     <!-- <IconComponent /> -->
-    <Card customClasses="md:max-w-xl" />
+    <!-- <Card customClasses="md:max-w-xl" /> -->
+    <RangeComponent />
 
     <!-- </div> -->
   </div>
