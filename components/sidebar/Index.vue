@@ -1,5 +1,5 @@
 <script setup>
-const { addComponent } = useBuilderPage();
+const { addComponent, page, state } = useBuilderPage();
 
 const items = [
   {
@@ -18,6 +18,12 @@ const items = [
     slot: 'settings',
   },
 ];
+
+const removeComponent = (index) => {
+  state.value.activeComponent = null;
+  state.value.activeComponentIndex = null;
+  page.value.splice(index, 1);
+};
 </script>
 
 <template>
@@ -27,6 +33,16 @@ const items = [
       <div class="grid grid-cols-4 gap-2">
         <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" @click="addComponent('heading')">
           <Icon name="i-gravity-ui:heading" class="text-2xl" />
+        </div>
+      </div>
+      <hr class="mt-4 mb-2" />
+      <div>
+        <div v-for="(component, index) in page" :key="index">
+          <div class="flex items-center gap-1">
+            <UIcon name="i-heroicons:bars-3-solid" :size="18" class="cursor-pointer" />
+            <h3 class="text-base capitalize">{{ component.component }}</h3>
+            <UIcon name="i-heroicons:x-mark-20-solid" :size="18" class="cursor-pointer text-red-500" @click="removeComponent(index)" />
+          </div>
         </div>
       </div>
     </template>
