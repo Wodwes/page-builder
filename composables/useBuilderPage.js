@@ -1,32 +1,28 @@
 export function useBuilderPage() {
+    const toast = useToast()
 
     // page state
     const state = useState('BuilderPageState', () => ({
-        activeComponent: 'heading',
-        activeComponentIndex: 0,
+        activeComponent: null,
+        activeComponentIndex: null,
     }));
 
     // page data
-    const page = useState('BuilderPageData', () => ([
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 1' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 2' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-        { component: 'heading', level: '1', size: '', style: '', text: 'Hello world 3' },
-    ]));
+    const page = useState('BuilderPageData', () => ([]));
 
     // add component to page
-    const addComponent = (component, props) => {
-        state.value.components.push({ component, props });
-        console.log(component, props);
+    const addComponent = (component) => {
+
+        let CurrComponent = null
+        if (component === 'heading') {
+            CurrComponent = { component: 'heading', level: '1', size: '', style: '', text: 'Enter heading text' }
+        }
+
+        page.value.push(CurrComponent);
+        toast.add({
+            description: `${CurrComponent.component.charAt(0).toUpperCase() + CurrComponent.component.slice(1)} has been added to the page`,
+            icon: 'i-lucide:check'
+        })
     };
 
     // expose variables and functions

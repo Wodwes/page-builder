@@ -23,7 +23,7 @@ const { state } = useApp();
     </div>
     <div class="relative z-10 h-[calc(100vh-66px)] border-l bg-white p-2 duration-200" :class="state.showCustomizer ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
       <!-- customizer tab -->
-      <ShowPageCustomizations />
+      <Customizer />
     </div>
   </main>
 </template>

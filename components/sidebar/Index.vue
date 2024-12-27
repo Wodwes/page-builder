@@ -25,8 +25,8 @@ const items = [
     <template #components="{ item }">
       <!-- headings -->
       <div class="grid grid-cols-4 gap-2">
-        <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" v-for="(heading, index) in [1, 2, 3, 4, 5, 6]" :key="index" @click="addComponent('heading', { level: heading })">
-          <Icon :name="'i-gravity-ui:heading-' + heading" class="text-2xl" />
+        <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" @click="addComponent('heading')">
+          <Icon name="i-gravity-ui:heading" class="text-2xl" />
         </div>
       </div>
     </template>
