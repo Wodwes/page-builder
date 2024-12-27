@@ -2,17 +2,17 @@
 import { defineProps } from 'vue';
 import { Icon } from '@iconify/vue';
 
-const props = defineProps({
+defineProps({
   icon: { default: 'material-symbols-light:star' },
   styleClasses: { default: 'bg-gary-500' },
-  height: { default: '30' },
-  width: { default: '30' },
+  height: { default: '60' },
+  width: { default: '60' },
 });
 </script>
 
 <template>
-  <div :class="props.styleClasses">
+  <div :class="styleClasses">
     <!-- use iconify icon   -->
-    <Icon :icon="props.icon" :width="props.width" :height="props.height" :ssr="true" />
+    <Icon :icon="icon" :width="width" :height="height" :ssr="true" />
   </div>
 </template>

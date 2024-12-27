@@ -12,12 +12,13 @@ import HeadingDesigns1 from '~/components/pro/HeadingDesigns/HeadingDesigns1.vue
 import HeadingDesigns2 from '~/components/pro/HeadingDesigns/HeadingDesigns2.vue';
 import DividerComponent from '~/components/pro/DividerComponent.vue';
 import FormComponent from '~/components/pro/forms/FormComponent.vue';
+import IconComponent from '~/components/pro/IconComponent.vue';
 </script>
 <template>
   <div class="mx-auto h-auto w-full">
     <!-- <div class="mx-2 rounded-md border p-4"> -->
     <!-- <Aside /> -->
-    <AuthForm customClass="md:max-w-xl" />
+    <!-- <AuthForm customClass="md:max-w-xl" /> -->
     <!-- <BlogPost /> -->
     <!-- <Banner1 /> -->
     <!-- <Banner2 /> -->
@@ -27,8 +28,9 @@ import FormComponent from '~/components/pro/forms/FormComponent.vue';
     <!-- <LightBoxGallery /> -->
     <!-- <HeadingDesigns1 /> -->
     <!-- <HeadingDesigns2 /> -->
-    <DividerComponent />
-    <FormComponent />
+    <!-- <DividerComponent /> -->
+    <!-- <FormComponent /> -->
+    <IconComponent />
 
     <!-- </div> -->
   </div>
