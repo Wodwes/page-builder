@@ -14,10 +14,10 @@ import DividerComponent from '~/components/pro/DividerComponent.vue';
 import FormComponent from '~/components/pro/forms/FormComponent.vue';
 </script>
 <template>
-  <div class="mx-auto h-auto w-full max-w-4xl">
+  <div class="mx-auto h-auto w-full">
     <!-- <div class="mx-2 rounded-md border p-4"> -->
     <!-- <Aside /> -->
-    <!-- <AuthForm /> -->
+    <AuthForm customClass="md:max-w-xl" />
     <!-- <BlogPost /> -->
     <!-- <Banner1 /> -->
     <!-- <Banner2 /> -->
