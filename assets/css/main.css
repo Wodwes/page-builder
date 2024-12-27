@@ -2,10 +2,26 @@
 @import '@nuxt/ui';
 
 @theme {
-  --font-inter: 'Inter', sans-serif;
+  /* fonts */
+  --font-inter: 'Inter';
+  --font-crimson-pro: 'Crimson Pro';
+  --font-ibm-plex-sans: 'IBM Plex Sans';
+  --font-poppins: 'Poppins';
 
+  /* breakpoints */
   --breakpoint-3xl: 1920px;
 
+  /* colors */
   --color-primary: #00c16a;
   --color-custom-gray: #6b7280;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
