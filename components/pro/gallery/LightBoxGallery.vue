@@ -27,7 +27,7 @@ const closeLightbox = () => {
 
 <template>
   <div class="rounded-md border bg-white p-8">
-    <h1 class="mb-8 text-center text-3xl font-bold text-gray-800">Advanced UI Gallery</h1>
+    <h1 class="mb-8 text-center text-3xl font-bold text-gray-800">Lightbox Gallery</h1>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Gallery Images -->
       <div v-for="(image, index) in images" :key="index" class="group relative overflow-hidden rounded-lg shadow-lg">
@@ -50,7 +50,3 @@ const closeLightbox = () => {
     </div>
   </div>
 </template>
-
-<style scoped>
-/* Additional custom styles for better UI */
-</style>
