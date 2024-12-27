@@ -34,7 +34,7 @@ import RangeComponent from '~/components/pro/RangeComponent.vue';
     <!-- <FormComponent /> -->
     <!-- <IconComponent /> -->
     <!-- <Card customClasses="md:max-w-xl" /> -->
-    <RangeComponent />
+    <RangeComponent customclasses="md:max-w-xl mx-auto" />
 
     <!-- </div> -->
   </div>
