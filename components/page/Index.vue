@@ -10,7 +10,7 @@ const setComponent = (component, index) => {
 </script>
 
 <template>
-  <ProTextHeading v-if="props.component === 'heading'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
-  <ProTextParagraph v-if="props.component === 'paragraph'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
+  <ProComponentsTextHeading v-if="props.component === 'heading'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
+  <ProComponentsTextParagraph v-if="props.component === 'paragraph'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
   <ProComponentsButton v-if="props.component === 'button'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
 </template>
