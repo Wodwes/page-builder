@@ -19,7 +19,7 @@ export function useBuilderPage() {
     } else if (component === 'paragraph') {
       CurrComponent = { component: 'paragraph', size: '', style: '', weight: 'font-normal', text: 'Enter paragraph text' };
     } else if (component === 'button') {
-      CurrComponent = { component: 'button', size: 'text-2xl ', style: 'border-none block ', display: 'inline', alignment: '', border: 'border-6 border-red-800', text: 'Click me' };
+      CurrComponent = { component: 'button', size: 'text-2xl ', style: '', display: 'block', alignment: '', border: 'border-6 border-red-800', text: 'Click me' };
     }
 
     if (!CurrComponent) return;

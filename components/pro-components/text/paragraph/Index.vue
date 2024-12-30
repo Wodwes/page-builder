@@ -2,5 +2,5 @@
 defineProps(['data']);
 </script>
 <template>
-  <p :class="[data.size, data.style, data.weight]">{{ data.text }}</p>
+  <p :class="[data.size, data.style, data.weight, , data.alignment]">{{ data.text }}</p>
 </template>

@@ -12,6 +12,10 @@
       <h3 class="mb-1 text-sm">Weight</h3>
       <USelect v-model="data.weight" :items="textWeights" placeholder="Weight" class="w-full" />
     </div>
+    <div class="">
+      <h3 class="mb-1 text-sm">Alignment</h3>
+      <USelect v-model="data.alignment" :items="textAlignment" placeholder="Alignment" class="w-full" />
+    </div>
   </div>
   <div>
     <h3 class="mb-1 text-sm">Title</h3>
@@ -22,5 +26,5 @@
 <script setup>
 defineProps(['data']);
 
-const { textSizes, textStyles, textWeights } = staticData();
+const { textSizes, textStyles, textWeights, textAlignment } = staticData();
 </script>

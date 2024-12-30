@@ -41,9 +41,9 @@ export default function () {
     { label: 'Inline', value: ' inline' },
   ];
   const textAlignment = [
-    { label: 'Left', value: ' text-left' },
+    { label: 'Left', value: 'text-left' },
     { label: 'Center', value: 'text-center' },
-    { label: 'Right', value: ' text-right' },
+    { label: 'Right', value: 'text-right' },
   ];
   // return
   return { headings, textSizes, textStyles, textWeights, buttonDispaly, textAlignment };

@@ -19,7 +19,6 @@
     <div class="">
       <h3 class="mb-1 text-sm">Alignment</h3>
       <USelect v-model="data.alignment" :items="textAlignment" placeholder="Alignment" class="w-full" />
-      {{ data.alignment }}
     </div>
   </div>
   <div class="">
