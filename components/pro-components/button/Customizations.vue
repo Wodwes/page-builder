@@ -15,7 +15,6 @@
     <div class="">
       <h3 class="mb-1 text-sm">Weight</h3>
       <USelect v-model="data.border" :items="buttonBorder" placeholder="Weight" class="w-full" />
-      {{ data.border }}
     </div>
   </div>
   <div class="">

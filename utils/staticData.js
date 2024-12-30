@@ -37,9 +37,9 @@ export default function () {
     { label: 'Extreme bold', value: 'font-black' },
   ];
   const buttonBorder = [
-    { label: 'sm', value: ' border border-2 bg-red-800' },
-    { label: 'Block', value: 'border border-8  bg-green-800' },
-    { label: 'Inline', value: ' bg-blue-800' },
+    { label: 'none', value: ' none' },
+    { label: 'Block', value: 'block' },
+    { label: 'Inline', value: ' inline' },
   ];
   // return
   return { headings, textSizes, textStyles, textWeights, buttonBorder };
