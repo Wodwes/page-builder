@@ -17,9 +17,9 @@ export function useBuilderPage() {
     if (component === 'heading') {
       CurrComponent = { component: 'heading', level: 1, size: 'text-2xl', weight: 'font-semibold', style: 'font-style-none', text: 'Enter heading text' };
     } else if (component === 'paragraph') {
-      CurrComponent = { component: 'paragraph', size: '', style: '', text: 'Enter paragraph text' };
+      CurrComponent = { component: 'paragraph', size: '', style: '', weight: 'font-normal', text: 'Enter paragraph text' };
     } else if (component === 'button') {
-      CurrComponent = { component: 'button', size: 'text-2xl border border-red p-2 bg-primary/10', style: '', text: 'Enter Button text' };
+      CurrComponent = { component: 'button', size: 'text-2xl ', style: 'border-none block ', border: 'border-6 border-red-800', text: 'Click me' };
     }
 
     if (!CurrComponent) return;

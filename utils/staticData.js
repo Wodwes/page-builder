@@ -1,5 +1,4 @@
 export default function () {
-
   const headings = [
     { label: 'H1', value: 1 },
     { label: 'H2', value: 2 },
@@ -37,6 +36,11 @@ export default function () {
     { label: 'Extra bold', value: 'font-extrabold' },
     { label: 'Extreme bold', value: 'font-black' },
   ];
+  const buttonBorder = [
+    { label: 'sm', value: ' border border-2 bg-red-800' },
+    { label: 'Block', value: 'border border-8  bg-green-800' },
+    { label: 'Inline', value: ' bg-blue-800' },
+  ];
   // return
-  return { headings, textSizes, textStyles, textWeights };
+  return { headings, textSizes, textStyles, textWeights, buttonBorder };
 }
