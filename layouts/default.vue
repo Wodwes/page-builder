@@ -1,6 +1,5 @@
 <script setup>
 useSeoMeta({ title: 'Page Builder | Wodwes' });
-
 const { state } = useApp();
 </script>
 
@@ -15,15 +14,16 @@ const { state } = useApp();
       <UAvatar icon="i-lucide-image" size="xl" />
     </div>
   </nav>
-  <main class="flex">
-    <ClientOnly>
-      <div class="relative z-10 h-[calc(100vh-66px)] shrink-0 border-r bg-white pr-0.5 duration-200" :class="state.showSidebar ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
-        <Sidebar />
-      </div>
-    </ClientOnly>
+  <main class="grid grid-cols-[auto_1fr_auto]">
+    <div class="relative z-10 h-[calc(100vh-66px)] border-r bg-white duration-200" :class="state.showSidebar ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
+      <Sidebar />
+    </div>
     <div class="h-[calc(100vh-71px)] w-full overflow-auto">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores dolorem eius sint, temporibus earum quasi? Voluptate hic impedit porro qui odio, amet enim odit mollitia praesentium ratione! Dolor, hic debitis.
-      <slot class="p-4" />
+      <slot />
+    </div>
+    <div class="relative z-10 h-[calc(100vh-66px)] border-l bg-white p-2 duration-200" :class="state.showCustomizer ? 'w-[260px]' : 'w-0 overflow-hidden opacity-0'">
+      <!-- customizer tab -->
+      <Customizer />
     </div>
   </main>
 </template>
