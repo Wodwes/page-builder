@@ -1,3 +1,5 @@
+@layer theme, base, components, utilities;
+
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
@@ -16,6 +18,12 @@
   --color-custom-gray: #6b7280;
 }
 
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
 @layer base {
   *,
   ::after,
@@ -23,5 +31,9 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  * {
+    @apply font-inter;
   }
 }

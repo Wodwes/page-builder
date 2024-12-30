@@ -1,14 +1,14 @@
+<script setup>
+const { state, page } = useBuilderPage();
+</script>
 <template>
-  <!-- <div class="text-primary">
-    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis eligendi alias mollitia facere assumenda. Sint, saepe? Aut animi sed, earum sapiente pariatur deserunt vitae, perspiciatis enim architecto tempore nemo labore!</h1>
-    <UButton>Test button</UButton>
-    <UAlert
-      title="Heads up!"
-      description="You can change the primary color in your app config."
-      icon="i-lucide-rocket"
-      :ui="{
-        icon: 'size-11',
-      }"
-    />
-  </div> -->
+  <div>
+    <!-- show components based on the builder page array -->
+    <template v-for="(component, index) in page" :key="index">
+      <Page :component="component.component" :data="component" :index="index" class="hover:bg-primary/5 hover:border-primary/25 border-y border-transparent" />
+    </template>
+
+    <!-- raw data -->
+    <!-- <pre>{{ state }}</pre> -->
+  </div>
 </template>

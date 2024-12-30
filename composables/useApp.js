@@ -1,8 +1,7 @@
-import { useStorage } from '@vueuse/core';
-
 export function useApp() {
-  const state = useState('useApp', () => ({
-    showSidebar: useStorage('persisted-sidebar', true)
+  const state = useState('AppState', () => ({
+    showSidebar: true,
+    showCustomizer: true
   }));
 
   return { state };
