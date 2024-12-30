@@ -9,5 +9,6 @@ const { state, page } = useBuilderPage();
     <ProComponentsTextHeadingCustomizations v-if="state.activeComponent === 'heading'" :data="page[state.activeComponentIndex]" />
     <ProComponentsTextParagraphCustomizations v-if="state.activeComponent === 'paragraph'" :data="page[state.activeComponentIndex]" />
     <ProComponentsButtonCustomizations v-if="state.activeComponent === 'button'" :data="page[state.activeComponentIndex]" />
+    <ProComponentsAuthFormCustomizations v-if="state.activeComponent === 'auth-form'" :data="page[state.activeComponentIndex]" />
   </div>
 </template>

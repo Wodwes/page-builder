@@ -22,9 +22,24 @@
     </div>
   </div>
 
-  <div>
-    <h3 class="mb-1 text-sm">Title</h3>
-    <UInput v-model="data.text" class="w-full" placeholder="Text" />
+  <div class="flex flex-col gap-2">
+    <div>
+      <h3 class="mb-1 text-sm">Title</h3>
+      <UInput v-model="data.title" class="w-full" placeholder="Text" />
+    </div>
+    <div>
+      <h3 class="mb-1 text-sm">login/Signup Title</h3>
+      <UInput v-model="data.loginSignupTitle" class="w-full" placeholder="Text" />
+    </div>
+    <div>
+      <h3 class="mb-1 text-sm">Error Title</h3>
+      <UInput v-model="data.error" class="w-full" placeholder="Text" />
+    </div>
+
+    <div>
+      <h3 class="mb-1 text-sm">Submit Button</h3>
+      <UInput v-model="data.submit" class="w-full" placeholder="Text" />
+    </div>
   </div>
 </template>
 

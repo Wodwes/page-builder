@@ -20,6 +20,8 @@ export function useBuilderPage() {
       CurrComponent = { component: 'paragraph', size: '', style: '', weight: 'font-normal', text: 'Enter paragraph text', alignment: 'text-left' };
     } else if (component === 'button') {
       CurrComponent = { component: 'button', size: 'text-4xl ', style: '', display: '', alignment: 'text-left', text: 'Click me' };
+    } else if (component === 'auth-form') {
+      CurrComponent = { component: 'auth-form', size: 'text-4xl ', style: '', display: '', alignment: 'text-left', title: 'Auth Form', loginSignupTitle: 'Signup', error: 'Error signing in', submit: 'Continue' };
     }
 
     if (!CurrComponent) return;

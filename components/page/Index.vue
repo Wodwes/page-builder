@@ -13,4 +13,5 @@ const setComponent = (component, index) => {
   <ProComponentsTextHeading v-if="props.component === 'heading'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
   <ProComponentsTextParagraph v-if="props.component === 'paragraph'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
   <ProComponentsButton v-if="props.component === 'button'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
+  <ProComponentsAuthForm v-if="props.component === 'auth-form'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
 </template>

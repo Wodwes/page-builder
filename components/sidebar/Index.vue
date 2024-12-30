@@ -42,6 +42,10 @@ const removeComponent = (index) => {
         <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" @click="addComponent('button')">
           <Icon name="i-material-symbols-light:buttons-alt-outline" class="text-2xl" />
         </div>
+        <!-- AuthForm -->
+        <div class="flex-center hover:bg-primary/10 aspect-square w-12 cursor-pointer rounded-md border p-2" @click="addComponent('auth-form')">
+          <Icon name="i-quill:folder-drafts" class="text-2xl" />
+        </div>
       </div>
       <hr class="mt-4 mb-2" />
       <div>

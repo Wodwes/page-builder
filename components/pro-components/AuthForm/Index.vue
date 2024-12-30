@@ -12,12 +12,12 @@ const password = ref('');
       <div class="w-full flex-col items-center justify-center gap-2 md:flex">
         <div class="flex flex-col items-center justify-center gap-2">
           <Icon icon="heroicons:lock-closed" width="30" height="30" class="mt- mb-2 text-black" />
-          <p class="text-2xl leading-8 font-bold text-black">Welcome back!</p>
+          <p class="text-2xl leading-8 font-bold text-black">{{ data.title }}</p>
         </div>
         <div class="flex flex-row items-center justify-center">
           <p class="text-custom-gray text-base leading-4">Don't have an account?</p>
           <NuxtLink to="#">
-            <p class="text-primary text-base leading-4">&nbsp;Sign up</p>
+            <p class="text-primary text-base leading-4">&nbsp;{{ data.loginSignupTitle }}</p>
           </NuxtLink>
           .
         </div>
@@ -42,8 +42,8 @@ const password = ref('');
         <div class="flex w-auto flex-col justify-start gap-4 py-1 md:w-full">
           <div class="flex w-auto flex-col justify-start gap-4 py-1 md:w-full">
             <UCheckbox label="Remember me" class="my-3" />
-            <UAlert title="Error signing in" color="error" icon="heroicons:information-circle-20-solid" :ui="{ icon: 'size-6' }" />
-            <UButton color="primary" class="mx-auto w-full justify-center">Continue</UButton>
+            <UAlert :title="data.error" color="error" icon="heroicons:information-circle-20-solid" :ui="{ icon: 'size-6' }" />
+            <UButton color="primary" class="mx-auto w-full justify-center">{{ data.submit }}</UButton>
           </div>
           <div class="my-4 flex items-center">
             <div class="flex-grow border-t border-gray-300"></div>
