@@ -2,13 +2,12 @@
 import { Icon } from '@iconify/vue/dist/iconify.js';
 const show = ref(false);
 const password = ref('');
-const props = defineProps({ customClass: { default: '' } });
 </script>
 
 <template>
   <UContainer class="w-full flex-col items-center justify-center md:flex">
     <!-- Header section with lock icon and welcome text -->
-    <div :class="`mx-2 w-full rounded-md border p-4 ${props.customClass}`">
+    <div :class="mx-2 w-full rounded-md border p-4 ">
       <div class="w-full flex-col items-center justify-center gap-2 md:flex">
         <div class="flex flex-col items-center justify-center gap-2">
           <Icon icon="heroicons:lock-closed" width="30" height="30" class="mt- mb-2 text-black" />
