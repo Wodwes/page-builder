@@ -36,11 +36,15 @@ export default function () {
     { label: 'Extra bold', value: 'font-extrabold' },
     { label: 'Extreme bold', value: 'font-black' },
   ];
-  const buttonBorder = [
-    { label: 'none', value: ' none' },
+  const buttonDispaly = [
     { label: 'Block', value: 'block' },
     { label: 'Inline', value: ' inline' },
   ];
+  const textAlignment = [
+    { label: 'Left', value: ' text-left' },
+    { label: 'Center', value: 'text-center' },
+    { label: 'Right', value: ' text-right' },
+  ];
   // return
-  return { headings, textSizes, textStyles, textWeights, buttonBorder };
+  return { headings, textSizes, textStyles, textWeights, buttonDispaly, textAlignment };
 }

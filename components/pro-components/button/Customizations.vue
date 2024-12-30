@@ -13,8 +13,13 @@
       <USelect v-model="data.weight" :items="textWeights" placeholder="Weight" class="w-full" />
     </div>
     <div class="">
-      <h3 class="mb-1 text-sm">Weight</h3>
-      <USelect v-model="data.border" :items="buttonBorder" placeholder="Weight" class="w-full" />
+      <h3 class="mb-1 text-sm">display</h3>
+      <USelect v-model="data.display" :items="buttonDispaly" placeholder="display" class="w-full" />
+    </div>
+    <div class="">
+      <h3 class="mb-1 text-sm">Alignment</h3>
+      <USelect v-model="data.alignment" :items="textAlignment" placeholder="Alignment" class="w-full" />
+      {{ data.alignment }}
     </div>
   </div>
   <div class="">
@@ -26,5 +31,5 @@
 <script setup>
 defineProps(['data']);
 
-const { textSizes, textStyles, textWeights, buttonBorder } = staticData();
+const { textSizes, textStyles, textWeights, buttonDispaly, textAlignment } = staticData();
 </script>
