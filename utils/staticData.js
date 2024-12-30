@@ -44,6 +44,7 @@ export default function () {
     { label: 'Left', value: 'text-left' },
     { label: 'Center', value: 'text-center' },
     { label: 'Right', value: 'text-right' },
+    { label: 'Justify', value: 'text-justify' },
   ];
   // return
   return { headings, textSizes, textStyles, textWeights, buttonDispaly, textAlignment };

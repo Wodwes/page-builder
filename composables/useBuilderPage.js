@@ -15,11 +15,11 @@ export function useBuilderPage() {
     let CurrComponent = null;
 
     if (component === 'heading') {
-      CurrComponent = { component: 'heading', level: 1, size: 'text-2xl', weight: 'font-semibold', style: 'font-style-none', text: 'Enter heading text' };
+      CurrComponent = { component: 'heading', level: 1, size: 'text-2xl', weight: 'font-semibold', style: 'font-style-none', text: 'Enter heading text', alignment: 'text-left' };
     } else if (component === 'paragraph') {
-      CurrComponent = { component: 'paragraph', size: '', style: '', weight: 'font-normal', text: 'Enter paragraph text' };
+      CurrComponent = { component: 'paragraph', size: '', style: '', weight: 'font-normal', text: 'Enter paragraph text', alignment: 'text-left' };
     } else if (component === 'button') {
-      CurrComponent = { component: 'button', size: 'text-2xl ', style: '', display: '', alignment: '', border: 'border-6 border-red-800', text: 'Click me' };
+      CurrComponent = { component: 'button', size: 'text-2xl ', style: '', display: '', alignment: 'text-left', border: 'border-6 border-red-800', text: 'Click me' };
     }
 
     if (!CurrComponent) return;
