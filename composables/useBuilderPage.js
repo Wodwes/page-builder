@@ -19,7 +19,7 @@ export function useBuilderPage() {
     } else if (component === 'paragraph') {
       CurrComponent = { component: 'paragraph', size: '', style: '', text: 'Enter paragraph text' };
     } else if (component === 'button') {
-      CurrComponent = { component: 'button', size: 'text-2xl block', style: '', text: 'Enter Button text' };
+      CurrComponent = { component: 'button', size: 'text-2xl border border-red p-2 bg-primary/10', style: '', text: 'Enter Button text' };
     }
 
     if (!CurrComponent) return;
