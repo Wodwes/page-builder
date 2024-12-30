@@ -9,12 +9,19 @@
       <h3 class="mb-1 text-sm">Size</h3>
       <USelect v-model="data.size" :items="textSizes" placeholder="Size" class="w-full" />
     </div>
-
-    <USelect v-model="data.style" :items="textStyles" placeholder="Style" class="w-full" />
-    <USelect v-model="data.weight" :items="textWeights" placeholder="Weight" class="w-full" />
+    <div class="">
+      <h3 class="mb-1 text-sm">Text Style</h3>
+      <USelect v-model="data.style" :items="textStyles" placeholder="Style" class="w-full" />
+    </div>
+    <div class="">
+      <h3 class="mb-1 text-sm">Font Weight</h3>
+      <USelect v-model="data.weight" :items="textWeights" placeholder="Weight" class="w-full" />
+    </div>
   </div>
-
-  <UInput v-model="data.text" class="w-full" placeholder="Text" />
+  <div class="">
+    <h3 class="mb-1 text-sm">Title</h3>
+    <UInput v-model="data.text" class="w-full" placeholder="Text" />
+  </div>
 </template>
 
 <script setup>

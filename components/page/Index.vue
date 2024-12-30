@@ -12,4 +12,5 @@ const setComponent = (component, index) => {
 <template>
   <TextHeading v-if="props.component === 'heading'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
   <TextParagraph v-if="props.component === 'paragraph'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
+  <TextButton v-if="props.component === 'button'" :data="props.data" :class="props.class" @click="setComponent(component, index)" />
 </template>
